@@ -1,0 +1,36 @@
+function toggleDropdown() {
+    const dropdown = document.getElementById('dropdownMenu');
+    dropdown.classList.toggle('show');
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('fade-in', 'show');
+    
+    document.addEventListener('click', function(event) {
+      if (event.target.tagName === 'A') {
+        event.preventDefault();
+        const href = event.target.getAttribute('href');
+  
+        document.body.classList.remove('show');
+        document.body.classList.add('fade-out');
+  
+        setTimeout(function() {
+          window.location.href = href;
+        }, 500);
+      }
+    });
+  });
+  
+
+  document.addEventListener("DOMContentLoaded", function() {
+  window.addEventListener("scroll", function() {
+    let dropdownIcon = document.querySelector('.fa-bars');
+    if (window.scrollY > 100) {
+      dropdownIcon.style.opacity = "0";
+      dropdownIcon.style.transition = "opacity 0.5s ease-out";
+    } else {
+      dropdownIcon.style.opacity = "1";
+      dropdownIcon.style.transition = "opacity 0.5s ease-in";
+    }
+  });
+});

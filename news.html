@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="7wR42eYRN36x45tlgi_pGgkDodDfBNgnav2IRkK_T1c" />
+  <title>Humphrey Yang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Humphrey Yang's Personal Website">
+  <link rel="icon" href="src/Stars.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.classList.toggle('show');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("scroll", function () {
+        let dropdownIcon = document.querySelector('.fa-bars');
+        if (window.scrollY > 200) { // Replace 200 with the scroll position where you want the icon to disappear
+          dropdownIcon.style.opacity = "0";
+          dropdownIcon.style.transition = "opacity 0.5s ease-out";
+        } else {
+          dropdownIcon.style.opacity = "1";
+          dropdownIcon.style.transition = "opacity 0.5s ease-in";
+        }
+      });
+    });
+
+  </script>
+
+  <title>List of Items</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.61803398875;
+      margin: 0;
+      padding: 0;
+    }
+
+    .item-container {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 20px;
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .time {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #333;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .description {
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="menu-bar">
+    <div class="icon-dropdown">
+      <i class="fa fa-bars" onclick="toggleDropdown()"></i>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="news.html">News</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header">
+    <nav>
+      <a href="https://github.com/HumphreyYang"><i class="fa fa-github fa-fw"></i></a>
+      <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5"><i class="fa fa-linkedin fa-fw"></i></a>
+      <a href="mailto:humphrey.ziyueyang@outlook.com"><i class="fa fa-envelope fa-fw"></i></a>
+      <a href="src/CV.pdf" class="cv-icon"><i class="fa  fa-file-text fa-fw"></i></a>
+    </nav>
+  </div>
+
+  <div class="main">
+    <section class="content-section">
+      <h2 class="section-title">About Me</h2>
+      <hr class="divider">
+      <div class="stack-wrapper">
+        <figure class="image">
+          <img src="src/cat.jpg" alt="A cat in front of Kyoto Imperial Palace">
+          <figcaption>Cat in front of Kyoto Imperial Palace</figcaption>
+        </figure>
+        <div class="text-content">
+          <p><!-- Your text content here --></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2 class="section-title">About Me</h2>
+      <div class="time">2023-09-06</div>
+      <hr class="divider">
+      <div class="stack-wrapper">
+        <figure class="image">
+          <img src="src/cat.jpg" alt="A cat in front of Kyoto Imperial Palace">
+          <figcaption>Cat in front of Kyoto Imperial Palace</figcaption>
+        </figure>
+        <div class="text-content">
+          <p><!-- Your text content here --></p>
+        </div>
+      </div>
+    </section>
+
+</body>
+
+</html>

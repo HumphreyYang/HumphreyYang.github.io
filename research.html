@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="7wR42eYRN36x45tlgi_pGgkDodDfBNgnav2IRkK_T1c" />
+  <title>Research</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Humphrey Yang's Personal Website">
+  <link rel="icon" href="src/Stars.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.classList.toggle('show');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("scroll", function () {
+        let dropdownIcon = document.querySelector('.fa-bars');
+        if (window.scrollY > 200) { // Replace 200 with the scroll position where you want the icon to disappear
+          dropdownIcon.style.opacity = "0";
+          dropdownIcon.style.transition = "opacity 0.5s ease-out";
+        } else {
+          dropdownIcon.style.opacity = "1";
+          dropdownIcon.style.transition = "opacity 0.5s ease-in";
+        }
+      });
+    });
+
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      background-color: #333
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.61803398875;
+      margin: 0;
+      padding: 0;
+    }
+
+    .item-container {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 20px;
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .time {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #333;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #ddd;
+      text-align: center;
+    }
+
+    .description {
+      color: #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="menu-bar">
+    <div class="icon-dropdown">
+      <i class="fa fa-bars" onclick="toggleDropdown()"></i>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="news.html">News</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header">
+    <nav>
+      <a href="https://github.com/HumphreyYang"><i class="fa fa-github fa-fw"></i></a>
+      <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5"><i class="fa fa-linkedin fa-fw"></i></a>
+      <a href="mailto:humphrey.ziyueyang@outlook.com"><i class="fa fa-envelope fa-fw"></i></a>
+      <a href="src/CV.pdf" class="cv-icon"><i class="fa fa-address-card"></i></a>
+    </nav>
+  </div>
+
+  <div class="main">
+    <h1>Hi there, this is Humphrey.</h1>
+    <div class="stack-wrapper">
+      <div class="text-content">
+        <p> I have been involved in multiple research projects as a research assistant ranging from theory and
+          application statistical/machine learning and data-centric techniques. </p>
+
+        <p> The following is a list of my research projects. </p>
+        <h2>Machine Learning</h2>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h3 class="section-title">Copyright Protection and Accountability of Generative AI: Attack, Watermarking and
+        Attribution</h3>
+      <hr class="divider">
+      <div class="stack-wrapper-light">
+        <figure class="image">
+          <img src="src/acm-flow.jpg" alt="A cat in front of Kyoto Imperial Palace">
+          <figcaption></figcaption>
+        </figure>
+        <div class="text-content-light">
+          <p>This work is published on WWW '23 Companion: Companion Proceedings of the ACM Web Conference 2023.</p>
+          <p>Our findings indicate that the current IPR protection methods for input images, model watermarking,
+            and attribution networks are largely satisfactory for a wide range of GANs.
+            We highlight that further attention must be directed towards protecting training sets,
+            as the current approaches fail to provide robust IPR protection and provenance tracing on training sets.
+            <a href="https://dl.acm.org/doi/abs/10.1145/3543873.3587321" class="cv-icon"><i
+                class="fa  fa-file-text fa-fw"></i></a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="content-section">
+      <h3 class="section-title">Copyright Protection and Accountability of Generative AI: Attack, Watermarking and
+        Attribution</h3>
+      <hr class="divider">
+      <div class="stack-wrapper-light">
+        <figure class="image">
+          <img src="src/acm-flow.jpg" alt="A cat in front of Kyoto Imperial Palace">
+          <figcaption></figcaption>
+        </figure>
+        <div class="text-content-light">
+          <p>This work is published on WWW '23 Companion: Companion Proceedings of the ACM Web Conference 2023.</p>
+          <p>Our findings indicate that the current IPR protection methods for input images, model watermarking,
+            and attribution networks are largely satisfactory for a wide range of GANs.
+            We highlight that further attention must be directed towards protecting training sets,
+            as the current approaches fail to provide robust IPR protection and provenance tracing on training sets.
+            <a href="https://dl.acm.org/doi/abs/10.1145/3543873.3587321" class="cv-icon"><i
+                class="fa  fa-file-text fa-fw"></i></a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+</body>
+
+</html>

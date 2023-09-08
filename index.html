@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="7wR42eYRN36x45tlgi_pGgkDodDfBNgnav2IRkK_T1c" />
+  <title>Humphrey's Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Humphrey Yang's Personal Website">
+  <link rel="icon" href="src/Stars.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="javascript/web.js"></script>
+  <style>
+    .cover h1 {
+      text-align: center;
+      font-size: calc(2em + 3vw);
+      color: white;
+      margin-bottom: 50px;
+    }
+
+    .cover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-image: url("src/bg_star.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body class="cover fade-in">
+
+  <div class="menu-bar">
+    <div class="icon-dropdown">
+      <i class="fa fa-bars" onclick="toggleDropdown()"></i>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <!-- <a href="research.html">Research</a> -->
+        <!-- <a href="teaching.html">Teaching</a>
+        <a href="quantecon.html">QuantEcon</a> -->
+        <!-- <a href="news.html">News</a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+    <h1>Humphrey Yang</h1>
+    <nav>
+      <div class="icon-text-wrapper">
+        <a href="https://github.com/HumphreyYang" class="icon-container"><i class="fa fa-github fa-fw"></i>
+          <span class="icon-text">Github</span></a>
+        <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5" class="icon-container"><i
+            class="fa fa-linkedin fa-fw"></i>
+          <span class="icon-text">LinkedIn</span></a>
+        <a href="mailto:humphrey.ziyueyang@gmail.com" class="icon-container"><i class="fa fa-envelope fa-fw"></i>
+          <span class="icon-text">Email</span></a>
+        <a href="src/CV.pdf" class="cv-icon" class="icon-container"><i class="fa fa-address-card"></i>
+          <span class="icon-text">CV</span></a>
+    </nav>
+  </div>
+
+</body>
+
+</html>

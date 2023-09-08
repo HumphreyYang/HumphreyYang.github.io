@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="7wR42eYRN36x45tlgi_pGgkDodDfBNgnav2IRkK_T1c" />
+  <title>About Humphrey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Humphrey Yang's Personal Website">
+  <link rel="icon" href="src/Stars.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="javascript/web.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      background-color: #333
+    }
+
+    text {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body class="fade-in">
+  <div class="menu-bar">
+    <div class="icon-dropdown">
+      <i class="fa fa-bars" onclick="toggleDropdown()"></i>
+      <div class="dropdown-content" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <!-- <a href="research.html">Research</a> -->
+        <!-- <a href="news.html">News</a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="header">
+    <nav>
+      <a href="https://github.com/HumphreyYang"><i class="fa fa-github fa-fw"></i></a>
+      <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5"><i class="fa fa-linkedin fa-fw"></i></a>
+      <a href="mailto:humphrey.ziyueyang@outlook.com"><i class="fa fa-envelope fa-fw"></i></a>
+      <a href="src/CV.pdf" class="cv-icon"><i class="fa fa-address-card"></i></a>
+    </nav>
+  </div>
+
+  <div class="main">
+    <h1>Hi there, this is Humphrey.</h1>
+    <div class="stack-wrapper">
+      <figure class="image">
+        <img src="src/cat.jpg" alt="A cat in front of Kyoto Imperial Palace" />
+        <figcaption>Cat in front of Kyoto Imperial Palace <br />
+          (Copyright Note: I asked for permission and had a meow as consent)
+        </figcaption>
+      </figure>
+      <div class="text-content">
+        <p> I was an undergraduate student at the Australian National University studying Data Analytics and Politics,
+          Philosophy and Economics. I am currently a research assistant at QuantEcon,
+          ANU Research School of Finance, Actuarial Studies and Statistics (RSFAS), and Data61, CSIRO. My research
+          interest lies in statistical learning, high-performance computing, and data-driven computational social
+          science.</p>
+
+        <p> When I have free time, I enjoy hiking around Canberra and traveling to taste different food.
+          If I were to rank the cities I've visited, my top three would be Kunming (where I was born and raised),
+          Kyoto (known for its good food and beautiful sunsets),
+          and Canberra (where I currently reside).
+        </p>
+
+        <p> Aside from that, I spend most of my time working with data and creating compelling visualizations that
+          illuminate the stories behind the statistics.
+          I like models (and I can list out a handful of models to a specific question in hand!), especially when the
+          assumptions are met and
+          when the data is of very high dimensions. However,
+          I believe an effective visualization can often convey a narrative more succinctly than a model.
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    &copy; <em id="date"></em>Humphrey Yang
+  </footer>
+</body>
+
+</html>
