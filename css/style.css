@@ -56,27 +56,27 @@ footer {
 }
 
 .fa-github {
-  font-size: calc(1.8em + 1.4vw);
+  font-size: calc(2.5em + 1.4vw);
   background-color: rgba(0, 0, 0, 0);
 }
 
 .fa-linkedin {
-  font-size: calc(1.8em + 1.4vw);
+  font-size: calc(2.5em + 1vw);
   background-color: rgba(0, 0, 0, 0);
 }
 
 .fa-envelope {
-  font-size: calc(1.8em + 1.4vw);
+  font-size: calc(2.5em + 1vw);
   background-color: rgba(0, 0, 0, 0);
 }
 
 .fa-file {
-  font-size: calc(1.8em + 1.4vw);
+  font-size: calc(1.8em + 1vw);
   background-color: rgba(0, 0, 0, 0);
 }
 
 .fa-address-card {
-  font-size: calc(1.8em + 1.4vw);
+  font-size: calc(2.5em + 1vw);
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -95,8 +95,8 @@ main {
 
 .icon-dropdown {
   position: fixed;
-  top: 40px;
-  left: 40px;
+  top: 30px;
+  left: 30px;
   padding: 8px 12px;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -171,7 +171,7 @@ nav a {
   background: inherit;
   padding: 20px 30px;
   text-decoration: none;
-  font-size: calc(1em + 0.5vw);
+  font-size: calc(0.5em + 1vw);
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -328,11 +328,13 @@ main .h1 {
 .icon-text {
   display: block;
   white-space: nowrap;
-  font-size: calc(0.6em + 0.3vw);
+  font-size: calc(0.5em + 0.3vw);
   color: rgb(186, 186, 186);
   margin-top: 0.8em;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 0.2em 0.2em;
   border-radius: 4px;
   font-family: "Montserrat", sans-serif;
+  white-space: nowrap;
+  width: max-content;
 }

@@ -1,3 +1,27 @@
+const setMaxTextWidth = () => {
+  let maxTextWidth = 0;
+  
+  const iconTextElements = document.querySelectorAll('.icon-text');
+  
+  iconTextElements.forEach((element) => {
+    element.style.width = 'auto';
+  });
+  
+  iconTextElements.forEach((element) => {
+    if (element.offsetWidth > maxTextWidth) {
+      maxTextWidth = element.offsetWidth;
+    }
+  });
+  
+  iconTextElements.forEach((element) => {
+    element.style.width = `${maxTextWidth}px`;
+  });
+};
+
+window.addEventListener("load", setMaxTextWidth);
+window.addEventListener("resize", setMaxTextWidth);
+
+
 function toggleDropdown() {
     const dropdown = document.getElementById('dropdownMenu');
     dropdown.classList.toggle('show');
@@ -22,7 +46,7 @@ function toggleDropdown() {
   });
   
 
-  document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", function() {
     let dropdownIcon = document.querySelector('.fa-bars');
     if (window.scrollY > 100) {
