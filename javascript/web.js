@@ -23,10 +23,15 @@ window.addEventListener("resize", setMaxTextWidth);
 
 
 function toggleDropdown() {
-    const dropdown = document.getElementById('dropdownMenu');
-    dropdown.classList.toggle('show');
+  const dropdown = document.getElementById('dropdownMenu');
+  if (dropdown.classList.contains('show')) {
+    dropdown.classList.remove('show');
+    dropdown.style.display = 'none';  // This will ensure it's not only invisible but also not taking up any space.
+  } else {
+    dropdown.style.display = 'block'; // Or whatever display value it should have.
+    dropdown.classList.add('show');
   }
-
+}
   document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('fade-in', 'show');
     
@@ -51,10 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let dropdownIcon = document.querySelector('.fa-bars');
     if (window.scrollY > 100) {
       dropdownIcon.style.opacity = "0";
+      dropdownIcon.style.pointerEvents = "none";  // Disables interaction with the element
       dropdownIcon.style.transition = "opacity 0.5s ease-out";
     } else {
       dropdownIcon.style.opacity = "1";
+      dropdownIcon.style.pointerEvents = "auto";  // Enables interaction with the element
       dropdownIcon.style.transition = "opacity 0.5s ease-in";
     }
-  });
-});
+  }    
+)});

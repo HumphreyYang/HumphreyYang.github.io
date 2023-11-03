@@ -28,10 +28,15 @@
   margin-left: 0;
   line-height: 1.6;
   text-align: justify;
-  color: #d78e20;
+  color: #587fa7;
 }
 
 .main a {
+  color: white;
+  background: inherit;
+}
+
+.main t {
   color: white;
   background: inherit;
 }
@@ -42,7 +47,23 @@
   margin-left: 0;
   line-height: 1.6;
   text-align: justify;
-  color: #d78e20;
+  color: #626174;
+}
+
+.main h3 {
+  font-size: calc(0.8em + 0.7vw);
+  margin-left: 0;
+  line-height: 1.6;
+  text-align: justify;
+  color: #587fa7;
+}
+
+.main li {
+  font-size: calc(0.7em + 0.5vw);
+  margin-left: 0;
+  line-height: 1.6;
+  text-align: justify;
+  color: #587fa7;
 }
 
 footer {
@@ -89,6 +110,13 @@ main {
   padding: 20px;
 }
 
+.content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: auto;
+  max-width: 100%;
+}
 .menu-bar {
   overflow: hidden;
 }
@@ -110,7 +138,7 @@ main {
 
 .dropdown-content {
   display: none;
-  top: 45px;
+  top: 10px;
   left: 12px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 999;
@@ -124,10 +152,10 @@ main {
 }
 
 .dropdown-content a {
-  padding: 14px 16px;
+  padding: 10px 16px;
   text-decoration: none;
   display: block;
-  font-size: calc(0.9em + 1.1vw);
+  font-size: calc(0.8em + 1vw);
   transition: background-color 0.2s ease;
   background-color: #2c3e50;
   color: #ecf0f1;
@@ -180,7 +208,7 @@ main .h1 {
   display: block;
   margin-top: 3rem;
   margin-bottom: 1rem;
-  color: #474a7b;
+  color: #2d3177;
   letter-spacing: 0.01em;
   font-weight: 700;
   font-style: normal;
@@ -223,7 +251,7 @@ main .h1 {
   height: 0.5em;
   background: #333;
   margin-bottom: 20px;
-  background: white;
+  background: rgb(192, 192, 192);
 }
 
 .image {
@@ -255,7 +283,7 @@ main .h1 {
 .stack-wrapper-light {
   display: flex;
   flex-direction: row;
-  background: rgb(154, 154, 154);
+  background: rgb(176, 176, 176);
 }
 
 .text-content {
@@ -270,7 +298,7 @@ main .h1 {
   flex: 2;
   margin-left: auto;
   margin-right: auto;
-  background: rgb(154, 154, 154);
+  background: rgb(255, 255, 255);
 }
 
 .text-content p {
