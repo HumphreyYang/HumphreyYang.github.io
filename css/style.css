@@ -41,6 +41,10 @@
   background: inherit;
 }
 
+li {
+  margin-bottom: 3px;  
+}
+
 .main h2 {
   font-family: "Montserrat", sans-serif;
   font-size: calc(1em + 0.9vw);
