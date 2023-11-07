@@ -327,6 +327,7 @@ main .h1 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0;
   }
   .image {
     order: 2;
@@ -336,6 +337,9 @@ main .h1 {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+  }
+  .main {
+    padding: 0px;
   }
 }
 
