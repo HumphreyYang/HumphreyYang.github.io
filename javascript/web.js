@@ -51,17 +51,29 @@ function toggleDropdown() {
   });
   
 
-document.addEventListener("DOMContentLoaded", function() {
-  window.addEventListener("scroll", function() {
-    let dropdownIcon = document.querySelector('.fa-bars');
-    if (window.scrollY > 100) {
-      dropdownIcon.style.opacity = "0";
-      dropdownIcon.style.pointerEvents = "none";  // Disables interaction with the element
-      dropdownIcon.style.transition = "opacity 0.5s ease-out";
-    } else {
-      dropdownIcon.style.opacity = "1";
-      dropdownIcon.style.pointerEvents = "auto";  // Enables interaction with the element
-      dropdownIcon.style.transition = "opacity 0.5s ease-in";
-    }
-  }    
-)});
+  document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function() {
+      const dropdownIcon = document.querySelector('.fa-bars');
+      const dropdownMenu = document.getElementById('dropdownMenu');
+      if (window.scrollY > 100) {
+        dropdownIcon.style.opacity = "0";
+        dropdownIcon.style.pointerEvents = "none";
+        dropdownIcon.style.transition = "opacity 0.5s ease-out";
+        // Apply the same effect to the dropdown menu
+        if (dropdownMenu.classList.contains('show')) {
+          dropdownMenu.style.opacity = "0";
+          dropdownMenu.style.transition = "opacity 0.5s ease-out";
+          setTimeout(() => {
+            dropdownMenu.classList.remove('show');
+            dropdownMenu.style.display = 'none';
+          }, 500); // Ensure this matches the transition time
+        }
+      } else {
+        dropdownIcon.style.opacity = "1";
+        dropdownIcon.style.pointerEvents = "auto";
+        dropdownIcon.style.transition = "opacity 0.5s ease-in";
+        // Reset dropdown menu opacity if needed
+        dropdownMenu.style.opacity = "1";
+      }
+    });
+  });
