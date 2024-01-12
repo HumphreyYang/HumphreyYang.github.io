@@ -289,6 +289,7 @@ main .h1 {
 }
 
 .text-content {
+  font-size: calc(0.45em + 0.45vw);
   width: 68%;
   flex: 2;
   margin-left: auto;
