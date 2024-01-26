@@ -165,7 +165,8 @@ main {
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #ecf0f1; /* Darker background on hover */
+  color: #34495e; /* Keep text color consistent */
 }
 
 .show {

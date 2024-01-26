@@ -49,6 +49,17 @@ function toggleDropdown() {
       }
     });
   });
+
+  document.addEventListener('click', function(event) {
+    var isClickInsideDropdown = document.querySelector('.icon-dropdown').contains(event.target);
+  
+    if (!isClickInsideDropdown) {
+      var dropdown = document.getElementById('dropdownMenu');
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+    }
+  });
   
 
   document.addEventListener("DOMContentLoaded", function() {
