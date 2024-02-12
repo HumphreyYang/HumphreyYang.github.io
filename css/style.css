@@ -194,7 +194,6 @@ a, a * {
   text-decoration: none;
   padding: 2px 2px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 /* Hover state */
