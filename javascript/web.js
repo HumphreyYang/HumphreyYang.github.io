@@ -36,13 +36,13 @@ function toggleDropdown() {
     document.body.classList.add('fade-in', 'show');
     
     document.addEventListener('click', function(event) {
-      if (event.target.tagName === 'A') {
+      if (event.target.tagName === 'A' && !event.target.classList.contains('no-fade')) {
         event.preventDefault();
         const href = event.target.getAttribute('href');
-  
+    
         document.body.classList.remove('show');
         document.body.classList.add('fade-out');
-  
+    
         setTimeout(function() {
           window.location.href = href;
         }, 500);
