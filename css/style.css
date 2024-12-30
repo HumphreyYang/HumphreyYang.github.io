@@ -20,6 +20,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
+
 .main h1 {
   font-family: "Montserrat", sans-serif;
   font-size: calc(1.5em + 2vw);
@@ -61,11 +62,16 @@ li {
 }
 
 .main li {
-  font-size: calc(0.7em + 0.5vw);
+  font-size: calc(0.9em + 0.5vw);
   margin-left: 0;
   line-height: 1.6;
   text-align: justify;
-  color: #587fa7;
+  color: white;
+}
+
+.main li p {
+  font-size: 0.8em; 
+  margin: 0; 
 }
 
 footer {
