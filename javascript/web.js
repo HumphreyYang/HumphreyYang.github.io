@@ -51,16 +51,26 @@ function toggleDropdown() {
   });
 
   document.addEventListener('click', function(event) {
-    var isClickInsideDropdown = document.querySelector('.icon-dropdown').contains(event.target);
-  
-    if (!isClickInsideDropdown) {
-      var dropdown = document.getElementById('dropdownMenu');
-      if (dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
-      }
+    if (event.target.tagName === 'A' && !event.target.classList.contains('no-fade')) {
+        event.preventDefault();
+        const href = event.target.getAttribute('href');
+        
+        history.pushState(null, '', href);
+        
+        document.body.classList.remove('show');
+        document.body.classList.add('fade-out');
+        
+        setTimeout(function() {
+            window.location.href = href;
+        }, 500);
     }
-  });
-  
+});
+
+window.addEventListener('popstate', function() {
+    document.body.classList.remove('fade-out');
+    document.body.classList.add('show');
+});
+
 
   document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", function() {
