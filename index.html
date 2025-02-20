@@ -47,20 +47,20 @@
 </head>
 
 <body class="cover fade-in">
-
-  <div class="menu-bar">
-    <div class="icon-dropdown">
-      <i class="fa fa-bars" onclick="toggleDropdown()"></i>
-      <div class="dropdown-content" id="dropdownMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <!-- <a href="quantecon.html">QuantEcon</a> -->
-        <a href="research.html">Research</a>
-        <!-- <a href="teaching.html">Teaching</a> -->
-        <!-- <a href="quantecon.html">News</a> -->
-      </div>
+    <!-- Sidebar toggle button -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">
+      <i class="fa fa-bars"></i>
+    </button>
+  
+    <!-- Collapsible sidebar -->
+    <div class="sidebar">
+      <nav class="sidebar-nav">
+        <a class="sidebar-nav-item active" href="index.html">Home</a>
+        <a class="sidebar-nav-item" href="about.html">About</a>
+        <a class="sidebar-nav-item" href="research.html">Research</a>
+        <!-- Add other links if needed -->
+      </nav>
     </div>
-  </div>
 
   <div class="content-wrapper">
     <h1>Humphrey Yang</h1>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Open+Sans:wght@400;600&display=swap');
+
+
 .content-wrapper {
   padding: 30px;
   border-radius: 12px;
@@ -385,21 +388,170 @@ main .h1 {
   from { opacity: 1; }
   to { opacity: 0; }
 }
-.icon-container {
-  display: inline-block;
-  text-align: center;
+
+.icon-container,
+.cv-icon { /* Add cv-icon here */
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: top;
+  margin: 0 15px;
+  text-decoration: none !important;
 }
 
+/* Icon text with grey box */
 .icon-text {
-  display: block;
+  display: block !important;
   white-space: nowrap;
   font-size: calc(0.5em + 0.3vw);
   color: rgb(186, 186, 186);
   margin-top: 0.8em;
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 0.2em 0.2em;
+  padding: 0.4em 0.8em;
   border-radius: 4px;
   font-family: "Montserrat", sans-serif;
-  white-space: nowrap;
   width: max-content;
+  text-align: center;
+  transform: translateY(-2px); /* Fine-tune vertical position */
+}
+
+/* Ensure icons themselves are properly aligned */
+.fa-github,
+.fa-linkedin,
+.fa-envelope,
+.fa-address-card {
+  display: block !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  z-index: 1001;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 18px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.6rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Sidebar Implementation */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 240px;
+  padding: 40px 20px;
+  background: rgba(40, 42, 54, 0.98);
+  color: #f8f8f2;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* Navigation Items */
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 15px;
+  justify-content: center; /* Center items vertically */
+}
+
+.sidebar-nav-item {
+  position: relative;
+  padding: 15px 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.8px;
+  color: #f8f8f2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  margin: 8px 0;
+}
+
+/* Hover Effects */
+.sidebar-nav-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translateX(8px);
+}
+
+/* Active State */
+.sidebar-nav-item.active {
+  background: rgba(139, 233, 253, 0.1) !important;
+  color: #8be9fd;
+  font-weight: 600;
+  border-left: 3px solid #8be9fd;
+}
+
+/* Gradient Line Effect */
+.sidebar-nav-item::after {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav-item:hover::after {
+  height: 60%;
+}
+
+/* Main Content Adjustment */
+.main-content {
+  margin-left: 240px;
+  transition: margin 0.3s ease-in-out;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+    padding: 80px 15px 20px;
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .sidebar-nav-item {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+  
+  .sidebar-toggle {
+    left: 15px;
+    top: 15px;
+    padding: 12px 18px;
+  }
 }

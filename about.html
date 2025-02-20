@@ -38,30 +38,38 @@
 </head>
 
 <body class="fade-in">
-  <div class="menu-bar">
-    <div class="icon-dropdown">
-      <i class="fa fa-bars" onclick="toggleDropdown()"></i>
-      <div class="dropdown-content" id="dropdownMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <!-- <a href="news.html">News</a> -->
-      </div>
-    </div>
+  <!-- Sidebar toggle button -->
+  <button class="sidebar-toggle" onclick="toggleSidebar()">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Collapsible sidebar -->
+  <div class="sidebar">
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item active" href="index.html">Home</a>
+      <a class="sidebar-nav-item" href="about.html">About</a>
+      <a class="sidebar-nav-item" href="research.html">Research</a>
+      <!-- Add other links if needed -->
+    </nav>
+    
+    <!-- Optional quote section -->
+    <!-- <div class="sidebar-quote">
+      <em>"When I have free time, I enjoy hiking around Canberra..."</em>
+    </div> -->
   </div>
 
   <div class="header">
-    <nav>
+    <!-- <nav>
       <a href="https://github.com/HumphreyYang"><i class="fa fa-github fa-fw"></i></a>
       <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5"><i class="fa fa-linkedin fa-fw"></i></a>
       <a href="mailto:humphrey.ziyueyang@outlook.com"><i class="fa fa-envelope fa-fw"></i></a>
       <a href="src/humphrey_cv.pdf" class="cv-icon"><i class="fa fa-address-card"></i></a>
-    </nav>
+    </nav> -->
   </div>
 
   <div class="content">
   <div class="main">
-    <h1>Hi there, this is Humphrey.</h1>
+    <h1>About me</h1>
     <div class="stack-wrapper">
       <figure class="image">
         <img src="src/me.jpg" alt="Me and Henry" />
