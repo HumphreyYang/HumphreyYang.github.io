@@ -54,18 +54,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Link click handler
-  document.addEventListener("click", function (event) {
+  document.addEventListener("click", function(event) {
     const link = event.target.closest("a");
-    if (!link || link.classList.contains("no-fade")) return;
-
-    if (link.hostname !== window.location.hostname) return;
-
+    if (!link) return;
+  
+    // Handle download links and external PDFs
+    if (link.classList.contains('download-link') || 
+        link.href.endsWith('.pdf') ||
+        link.hostname !== window.location.hostname) {
+      // Open in new tab for external links
+      if (link.hostname !== window.location.hostname) {
+        event.preventDefault();
+        window.open(link.href, '_blank');
+      }
+      return true; // Allow default behavior for local PDFs
+    }
+  
+    if (link.classList.contains("no-fade")) return;
+  
     event.preventDefault();
     const url = link.href;
-
+  
     document.body.classList.remove("show");
     document.body.classList.add("fade-out");
-
+  
     setTimeout(() => {
       window.location.href = url;
     }, 500);
