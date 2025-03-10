@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CV528MPEP6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CV528MPEP6');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="7wR42eYRN36x45tlgi_pGgkDodDfBNgnav2IRkK_T1c" />
+  <title>About Humphrey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Humphrey Yang's Personal Website">
+  <link rel="icon" href="src/Stars.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="javascript/web.js"></script>
+
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: #333;
+      color: #fff;
+      margin: 0; padding: 0;
+    }
+
+    .content {
+      width: 80%; margin: auto; padding: 20px;
+      margin-top:60px; /* Shift down content below toggle button */
+    }
+
+    input{
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    input {
+      background-color: #555;
+      color: #fff;
+    }
+
+    a {
+      color: #4da6ff;
+      word-break: break-all;
+    }
+
+    text {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+    
+  </style>
+</head>
+
+<body class="fade-in">
+  <!-- Sidebar toggle button -->
+  <button class="sidebar-toggle" onclick="toggleSidebar()">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Collapsible sidebar -->
+  <div class="sidebar">
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item active" href="index.html">Home</a>
+      <a class="sidebar-nav-item" href="about.html">About</a>
+      <a class="sidebar-nav-item" href="research.html">Research</a>
+      <!-- Add other links if needed -->
+    </nav>
+    
+    <!-- Optional quote section -->
+    <!-- <div class="sidebar-quote">
+      <em>"When I have free time, I enjoy hiking around Canberra..."</em>
+    </div> -->
+  </div>
+
+  <div class="header">
+    <!-- <nav>
+      <a href="https://github.com/HumphreyYang"><i class="fa fa-github fa-fw"></i></a>
+      <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5"><i class="fa fa-linkedin fa-fw"></i></a>
+      <a href="mailto:humphrey.ziyueyang@outlook.com"><i class="fa fa-envelope fa-fw"></i></a>
+      <a href="src/humphrey_cv.pdf" class="cv-icon"><i class="fa fa-address-card"></i></a>
+    </nav> -->
+  </div>
+
+  <div class="content" style="color: white;">
+    <h1>Timezone Schedule Converter</h1>
+    <p>Enter meeting details below to generate your personalized World Time Buddy conversion link.</p>
+
+    <p>
+      <label for="date" style="color: white;"> Meeting Date (YYYY-MM-DD): </label>
+      <input type="date" style="color: white;" id="date" required>
+    </p>
+
+    <p>
+      <label for="startTime" style="color: white;">Start Hour (24hr format, e.g., 16): </label>
+      <input style="color: white;" type="number" id="startTime" min="0" max="23" required>
+    </p>
+
+    <p>
+      <label for="endTime">End Hour (24hr format, e.g., 17):</label>
+      <input type="number" id="endTime" min="0" max="23" required>
+    </p>
+
+    <p>
+      <label for="timezones">Timezone City IDs (comma-separated):</label>
+      <input type="text" id="timezones" value="2172517,1857910,8,7,5128581" required>
+    </p>
+
+    <p>
+      <label for="homeTimezone">Home Timezone ID:</label>
+      <input type="text" id="homeTimezone" value="2172517" required>
+    </p>
+
+    <button onclick="generateLink()">Generate Link</button>
+
+    <h3>Generated Conversion Link:</h3>
+    <p id="result"><em>Your link will appear here.</em></p>
+
+  </div>
+
+  <footer style="text-align:center; padding:20px;">
+    &copy; <em id="date"></em> Humphrey Yang | My homebrewed website : )
+  </footer>
+
+  <!-- Javascript -->
+  <script>
+    function generateLink() {
+      const date = document.getElementById('date').value;
+      const startTime = document.getElementById('startTime').value;
+      const endTime = document.getElementById('endTime').value;
+      const tzs = document.getElementById('timezones').value.replace(/\s/g, '');
+      const homeTZ = document.getElementById('homeTimezone').value;
+      if (!date || !startTime || !endTime || !tzs || !homeTZ) {
+        alert('Please fill out all fields.');
+        return;
+      }
+
+      const baseLink = `https://www.worldtimebuddy.com/?qm=1&lid=${tzs}&h=${homeTZ}&date=${date}&sln=${startTime}-${endTime}&hf=1`;
+      document.getElementById('result').innerHTML = `<a href="${baseLink}" target="_blank">${baseLink}</a>`;
+    }
+
+    // Automatically update footer year
+    document.getElementById('date').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
