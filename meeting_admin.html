@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Meeting Scheduler</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #222;
+      color: #fff;
+      margin: auto;
+      padding:10px;
+      max-width:950px;
+    }
+    table{
+      border-collapse:collapse; 
+      width:100%;
+    }
+    td,th{
+      border:1px solid #888;padding:6px;text-align:center;
+    }
+    .unavailable{background:#e74c3c;color:#fff;}
+    button,input{padding:7px;width:300px;border-radius:5px;margin:5px;}
+  </style>
+</head>
+
+<body>
+  <h2>Admin Scheduler - User Availability Overview</h2>
+
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>Timestamp</th><th>Topic</th><th>Availability</th>
+      </tr>
+  </table>
+
+  <hr/>
+  <h3>Generate Meeting Link</h3>
+
+  <input type="date" id="meeting-date"/>
+  <select id="time-slot"></select><br/>
+  <button onclick="generateLink()">Generate Meeting Link</button>
+
+  <p id="meeting-link"></p>
+
+<script>
+const days=["Monday","Tuesday","Wednesday","Thursday","Friday"];
+const times = ["9-10AM (7-8AM)","10-11AM (8-9AM)","11-12PM (9-10AM)","12-1PM (10-11AM)",
+"1-2PM (11-12PM)","2-3PM (12-1PM)","3-4PM (1-2PM)","4-5PM (2-3PM)",
+"5-6PM (3-4PM)","6-7PM (4-5PM)"];
+
+window.onload=()=>{
+fetch("YOUR_WEB_APP_URL").then(res=>res.json()).then(data=>{
+  let avail={},table=document.createElement("table");
+  document.body.prepend(table);
+
+  let hr=["Timestamp","Topic",...days]; // header
+  tableHead=table.insertRow();
+  headText=["Timestamp","Topic","Availability"];
+  headText.forEach(h=>table.insertAdjacentHTML('beforeend',`<th>${h}</th>`));
+
+  dataToHTML="";
+  data.forEach(row=>{
+    let availObj = JSON.parse(row.availability);
+    let unavailStr = "";
+    days.forEach(day=>{
+      unavailStr += day+": "+times.filter(time=>!availObj[day].includes(time)).join(", ")+"<br>";
+    });
+    dataToHTML+=`<tr><td>${row.timeStamp}</td><td>${row.topic}</td><td>${unavailStr || "Fully Available"}</td></tr>`;
+  });
+  table.innerHTML+=dataToHTML;
+
+  days.forEach(d=>times.forEach(t=>{
+    document.getElementById("time-slot").innerHTML+=`<option>${d} ${t}</option>`;
+  }));
+
+  });
+
+function generateLink(){
+  const selectedDate = document.getElementById("meeting-date").value;
+  const selectedSlot = document.getElementById("time-slot").value;
+  if(!date.value || !selectedSlot){alert("Select Date & Slot first ");return;}
+  
+  const timeMap={"9-10AM (7-8AM)":"9-10","10-11AM (8-9AM)":"10-11",
+                 "11-12PM (9-10AM)":"11-12","12-1PM (10-11AM)":"12-13","1-2PM (11-12PM)":"13-14",
+                 "2-3PM (12-1PM)":"14-15","3-4PM (1-2PM)":"15-16","4-5PM (2-3PM)":"16-17",
+                 "5-6PM (3-4PM)":"17-18","6-7PM (4-5PM)":"18-19"};
+
+  let date=document.getElementById("meeting-date").value;
+  let selected=document.getElementById("time-slot").value;
+  if(!date||!selected)return alert("select date and slot");
+
+  let splitSlot=selected.split(" ");
+  let hours=slotHour=selected.match(/\d.*$/)[0];
+  let ts= timeSlotMap= timeHour=timeSlotMap[selected.match(/\d.*$/)[0]];
+
+  let url=`https://www.worldtimebuddy.com/?qm=1&lid=2172517,1857910,8,7,5128581&h=2172517&date=${date}&sln=${timeSlot}&hf=1`;
+  document.getElementById("meeting-link").innerHTML=`<a target='_blank'href='${url}'>${selected} ${date} Link</a>`;
+}
+</script>
+
+<!-- fetch from backend -->
+<script>
+let scriptURL='https://script.google.com/macros/s/AKfycbzDrINEMyv8Y6zqYY53P-3BgQCdaleu_ExBxHdQjwV2ptpI7ePjNDR9ScuKzequAim8Uw/exec';
+
+fetch(scriptURL).then(r=>r.json())
+.then(data=>{
+
+let table=document.createElement('table');
+document.body.prepend(table);
+
+});
+</script>
+</body>
+</html>

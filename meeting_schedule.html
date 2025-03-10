@@ -5,24 +5,24 @@
   <meta charset="UTF-8">
   <title>Meeting Availability</title>
   <link rel="icon" href="src/Stars.jpg">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   
   <style>
     body {
       font-family: 'Montserrat', Arial, sans-serif;
-      max-width: 850px;
-      margin: auto;
-      background: #333;
+      background-color: #333;
       color: #fff;
-      padding: 15px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
     }
-
+    
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
     }
-
+    
     th, td {
       border: 1px solid #555;
       padding: 10px;
@@ -34,117 +34,102 @@
     th {
       background-color: #444;
     }
-
+    
     .available {
-      background-color: #4caf50; /* green indicates available*/
+      background-color: #4caf50;
     }
 
     textarea, input {
-      background: #555;
-      color: #fff;
+      background-color: #555;
       border-radius:6px;
       width: 100%;
       padding: 10px;
+      color: white;
       border:none;
       margin-bottom: 15px;
       resize:none;
     }
 
     button {
-      background-color: #2196F3;
+      background: #2196F3;
       color: #fff;
       border: none;
-      padding:10px 15px;
-      cursor:pointer;
+      padding: 10px 15px;
+      cursor: pointer;
       border-radius:6px;
     }
-
+    
     button:hover {
       background-color: #1976D2;
     }
 
-    .response{
-      color:gold;margin-top:10px;
+    .hidden{
+      display: none;
     }
   </style>
 </head>
 
 <body>
-<h2>Weekly Availability Schedule (Canberra/Kyoto)</h2>
-<p>All times below are initially marked as <strong style="color:#4caf50">AVAILABLE</strong>. Click on the times you are <strong>NOT AVAILABLE</strong> to unhighlight them.</p>
+  <h2>Weekly Meeting Availability (Canberra/Kyoto)</h2>
+  <p>👉 All slots are initially marked as <strong style="color:#4caf50">AVAILABLE</strong>. Please click to mark slots that you are <strong>NOT available</strong> (removing green highlight).</p>
 
-<table id="availability-table">
-  <tr>
-    <th>Time</th>
-    <th>Monday</th>
-    <th>Tuesday</th>
-    <th>Wednesday</th>
-    <th>Thursday</th>
-    <th>Friday</th>
-  </tr>
-</table>
+  <table id="availability-table">
+    <tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th></tr>
+  </table>
 
-<textarea id="topic" placeholder="Enter your presentation topic here..."></textarea>
+  <textarea id="topic" placeholder="Enter your presentation topic here..."></textarea>
 
-<button onclick="submitData()">Submit Availability</button>
+  <button onclick="submitForm()">Submit Availability</button>
 
-<p id="responseMsg"></p>
+  <p id="response"></p>
+
+  <!-- Hidden Form -->
+  <form class="hidden" id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzDrINEMyv8Y6zqYY53P-3BgQCdaleu_ExBxHdQjwV2ptpI7ePjNDR9ScuKzequAim8Uw/exec" target="hiddenIframe">
+    <input name="Availability" id="formAvailability">
+    <input name="Topic" id="formTopic">
+  </form>
+
+  <iframe name="hiddenIframe" id="hiddenIframe" class="hidden"></iframe>
 
 <script>
-const times = ["9-10AM (7-8AM)", "10-11AM (8-9AM)", "11-12PM (9-10AM)", "12-1PM (10-11AM)", "1-2PM (11-12PM)",
-               "2-3PM (12-1PM)", "3-4PM (1-2PM)", "4-5PM (2-3PM)", "5-6PM (3-4PM)", "6-7PM (4-5PM)"];
-
+const times = ["9-10 AM (7-8 AM)", "10-11 AM (8-9 AM)", "11-12 PM (9-10 AM)", "12-1 PM (10-11 AM)", "1-2 PM (11-12 PM)", "2-3 PM (12-1 PM)", "3-4 PM (1-2 PM)", "4-5 PM (2-3 PM)", "5-6 PM (3-4 PM)", "6-7 PM (4-5 PM)"];
 const days = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
+const table = document.getElementById("availability-table");
 
-const table = document.querySelector("#availability-table");
-times.forEach(time=>{
-  let row=table.insertRow();
-  row.insertCell().innerText=time;
+times.forEach((time)=>{
+  let row = table.insertRow();
+  row.insertCell().innerText = time;
   days.forEach(()=>{
-    let cell=row.insertCell();
-    cell.classList.add("available"); // initially available
-    cell.onclick=()=>cell.classList.toggle("available");
+    let cell = row.insertCell();
+    cell.classList.add("available");
+    cell.onclick = ()=>cell.classList.toggle("available");
   });
 });
 
-function submitData(){
-  const topic = document.getElementById("topic").value.trim();
-  if(topic===""){alert("Please enter a topic."); return;}
-
-  let personalAvailability = {};
+function submitForm(){
+  let availability={};
   days.forEach((day,col)=>{
-    personalAvailability[day]=[];
+    availability[day]=[];
     times.forEach((time,row)=>{
       let cell=table.rows[row+1].cells[col+1];
       if(cell.classList.contains("available"))
-        personalAvailability[day].push(time);
+        availability[day].push(time);
     });
   });
 
-  const scriptURL='https://script.google.com/macros/s/AKfycbwIBB-bnftx5aSpHGFjmnv_SSPahWuk8x4e2kXfbNr6XcicpSctXYEtwvBZiSCmIIe_jQ/exec'; // Replace this with your Apps Script Deployment URL
+  document.getElementById("formAvailability").value=JSON.stringify(availability);
+  document.getElementById("formTopic").value=document.getElementById("topic").value.trim();
 
-  const formData=new FormData();
-  formData.append("topic",topic);
-  formData.append("availability",JSON.stringify(personalAvailability));
+  document.getElementById("gform").submit();
 
-  fetch(scriptURL,{
-    method:'POST',
-    body:formData
-  })
-  .then(res=>res.json())
-  .then(response=>{
-    document.getElementById("responseMsg").innerHTML="✅ Availability and topic successfully submitted!";
-  }).catch(e=>{ 
-    console.error(e);
-    alert("Something went wrong, check console!");
-  });
+  document.getElementById("response").innerHTML = "✅ Availability submitted successfully!";
 }
 </script>
 
-<footer style="text-align:center;color:#aaa;margin-top:40px;">
-  &copy; <em id="year"></em> Humphrey Yang | Meeting Scheduling System
+<footer style="text-align:center;color:#aaa;margin-top:50px;">
+  &copy; <span id='year'></span> Humphrey Yang | Scheduling System
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </footer>
-<script>document.querySelector('footer').innerHTML+='⏰ '+new Date().getFullYear();</script>
 
 </body>
 </html>
