@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reading Group Availability Timetable - Presenters: Bishmay Barik, Longye Tian</title>
+    <title>Reading Group Availability Timetable - Presenters: Longye, shu</title>
     <style>
         * {
             margin: 0;
@@ -370,20 +370,20 @@
     <div class="container">
         <div class="header">
             <h1>📅 Reading Group Availability Timetable</h1>
-            <div class="subtitle">Sydney Time (AEST)</div>
+            <div class="subtitle">Tokyo Time (JST)</div>
         </div>
         
         
             <div class="presenter-info">
-                <h2>👤 Presenters: Bishmay Barik, Longye Tian</h2>
-                <p>Slots marked in grey (14 total) are when the presenters are unavailable (any of them)</p>
+                <h2>👤 Presenters: Longye, shu</h2>
+                <p>Slots marked in grey (36 total) are when the presenters are unavailable (any of them)</p>
             </div>
         
         
         <div class="content">
             <div class="stats">
                 <div class="stat-card">
-                    <div class="stat-value">4</div>
+                    <div class="stat-value">8</div>
                     <div class="stat-label">Total Participants</div>
                 </div>
                 <div class="stat-card">
@@ -391,10 +391,10 @@
                     <div class="stat-label">Time Slots</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">9</div>
+                    <div class="stat-value">1</div>
                     <div class="stat-label">All Available</div>
                 </div>
-                <div class="stat-card"><div class="stat-value">14</div><div class="stat-label">Presenter(s) Unavailable</div></div>
+                <div class="stat-card"><div class="stat-value">36</div><div class="stat-label">Presenter(s) Unavailable</div></div>
             </div>
 
             <div class="controls">
@@ -404,9 +404,9 @@
                     </label>
                     <input type="text" 
                            id="presenterInput" 
-                           placeholder="e.g., Humphrey Yang, Bishmay Barik, Nisha"
+                           placeholder="e.g., Jingni, Matheus, shu"
                            autocomplete="off">
-                    <small>Total participants: 4 | Enter any number of names to find common availability</small>
+                    <small>Total participants: 8 | Enter any number of names to find common availability</small>
                 </div>
                 <div class="button-group">
                     <button onclick="highlightPresenters()">🔍 Find Common Availability</button>
@@ -460,753 +460,934 @@
     <script>
         // Data from Python
         const availabilityData = {
-  "Mon 1": [
+  "Mon 8": [
     {
-      "time_slot": "Mon 1 Sep 2025 09:00 - 10:00",
+      "time_slot": "Mon 8 Sep 2025 08:00 - 09:00",
+      "time_only": "08:00 - 09:00",
+      "start_hour": 8,
+      "count": 5,
+      "participants": [
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Mon 8 Sep 2025 09:00 - 10:00",
       "time_only": "09:00 - 10:00",
       "start_hour": 9,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Mon 1 Sep 2025 10:00 - 11:00",
+      "time_slot": "Mon 8 Sep 2025 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Mon 1 Sep 2025 11:00 - 12:00",
+      "time_slot": "Mon 8 Sep 2025 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Mon 1 Sep 2025 12:00 - 13:00",
+      "time_slot": "Mon 8 Sep 2025 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Mon 1 Sep 2025 13:00 - 14:00",
+      "time_slot": "Mon 8 Sep 2025 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Mon 1 Sep 2025 14:00 - 15:00",
+      "time_slot": "Mon 8 Sep 2025 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
-      "count": 3,
+      "count": 4,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Mon 1 Sep 2025 15:00 - 16:00",
+      "time_slot": "Mon 8 Sep 2025 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
       "count": 4,
       "participants": [
-        "Humphrey Yang",
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Mon 1 Sep 2025 16:00 - 17:00",
+      "time_slot": "Mon 8 Sep 2025 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
       "start_hour": 16,
       "count": 4,
       "participants": [
-        "Humphrey Yang",
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Mon 1 Sep 2025 17:00 - 18:00",
+      "time_slot": "Mon 8 Sep 2025 17:00 - 18:00",
       "time_only": "17:00 - 18:00",
       "start_hour": 17,
       "count": 4,
       "participants": [
-        "Humphrey Yang",
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Mon 1 Sep 2025 18:00 - 19:00",
-      "time_only": "18:00 - 19:00",
-      "start_hour": 18,
-      "count": 4,
-      "participants": [
-        "Humphrey Yang",
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    }
-  ],
-  "Tue 2": [
-    {
-      "time_slot": "Tue 2 Sep 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 2,
-      "participants": [
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Tue 2 Sep 2025 10:00 - 11:00",
-      "time_only": "10:00 - 11:00",
-      "start_hour": 10,
-      "count": 2,
-      "participants": [
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Tue 2 Sep 2025 11:00 - 12:00",
-      "time_only": "11:00 - 12:00",
-      "start_hour": 11,
-      "count": 2,
-      "participants": [
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Tue 2 Sep 2025 12:00 - 13:00",
-      "time_only": "12:00 - 13:00",
-      "start_hour": 12,
-      "count": 2,
-      "participants": [
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Tue 2 Sep 2025 13:00 - 14:00",
-      "time_only": "13:00 - 14:00",
-      "start_hour": 13,
-      "count": 3,
-      "participants": [
-        "Humphrey Yang",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Tue 2 Sep 2025 14:00 - 15:00",
-      "time_only": "14:00 - 15:00",
-      "start_hour": 14,
-      "count": 3,
-      "participants": [
-        "Humphrey Yang",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Tue 2 Sep 2025 15:00 - 16:00",
-      "time_only": "15:00 - 16:00",
-      "start_hour": 15,
-      "count": 3,
-      "participants": [
-        "Humphrey Yang",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Tue 2 Sep 2025 16:00 - 17:00",
-      "time_only": "16:00 - 17:00",
-      "start_hour": 16,
-      "count": 3,
-      "participants": [
-        "Humphrey Yang",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Tue 2 Sep 2025 17:00 - 18:00",
-      "time_only": "17:00 - 18:00",
-      "start_hour": 17,
-      "count": 3,
-      "participants": [
-        "Humphrey Yang",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Tue 2 Sep 2025 18:00 - 19:00",
-      "time_only": "18:00 - 19:00",
-      "start_hour": 18,
-      "count": 3,
-      "participants": [
-        "Humphrey Yang",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
+        "Longye",
+        "shu"
       ]
     }
   ],
-  "Wed 3": [
+  "Tue 9": [
     {
-      "time_slot": "Wed 3 Sep 2025 09:00 - 10:00",
+      "time_slot": "Tue 9 Sep 2025 08:00 - 09:00",
+      "time_only": "08:00 - 09:00",
+      "start_hour": 8,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Tue 9 Sep 2025 09:00 - 10:00",
       "time_only": "09:00 - 10:00",
       "start_hour": 9,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Wed 3 Sep 2025 10:00 - 11:00",
+      "time_slot": "Tue 9 Sep 2025 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Wed 3 Sep 2025 11:00 - 12:00",
+      "time_slot": "Tue 9 Sep 2025 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Wed 3 Sep 2025 12:00 - 13:00",
+      "time_slot": "Tue 9 Sep 2025 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
-      "count": 3,
+      "count": 4,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Wed 3 Sep 2025 13:00 - 14:00",
+      "time_slot": "Tue 9 Sep 2025 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
       "count": 4,
       "participants": [
-        "Humphrey Yang",
-        "Bishmay Barik",
+        "Matheus",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Wed 3 Sep 2025 14:00 - 15:00",
+      "time_slot": "Tue 9 Sep 2025 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
       "count": 4,
       "participants": [
-        "Humphrey Yang",
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
     },
     {
-      "time_slot": "Wed 3 Sep 2025 15:00 - 16:00",
-      "time_only": "15:00 - 16:00",
-      "start_hour": 15,
-      "count": 4,
-      "participants": [
-        "Humphrey Yang",
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Wed 3 Sep 2025 16:00 - 17:00",
-      "time_only": "16:00 - 17:00",
-      "start_hour": 16,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Wed 3 Sep 2025 17:00 - 18:00",
-      "time_only": "17:00 - 18:00",
-      "start_hour": 17,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Wed 3 Sep 2025 18:00 - 19:00",
-      "time_only": "18:00 - 19:00",
-      "start_hour": 18,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    }
-  ],
-  "Thu 4": [
-    {
-      "time_slot": "Thu 4 Sep 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Thu 4 Sep 2025 10:00 - 11:00",
-      "time_only": "10:00 - 11:00",
-      "start_hour": 10,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Thu 4 Sep 2025 11:00 - 12:00",
-      "time_only": "11:00 - 12:00",
-      "start_hour": 11,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Thu 4 Sep 2025 12:00 - 13:00",
-      "time_only": "12:00 - 13:00",
-      "start_hour": 12,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Thu 4 Sep 2025 13:00 - 14:00",
-      "time_only": "13:00 - 14:00",
-      "start_hour": 13,
-      "count": 4,
-      "participants": [
-        "Humphrey Yang",
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Thu 4 Sep 2025 14:00 - 15:00",
-      "time_only": "14:00 - 15:00",
-      "start_hour": 14,
-      "count": 4,
-      "participants": [
-        "Humphrey Yang",
-        "Bishmay Barik",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Thu 4 Sep 2025 15:00 - 16:00",
+      "time_slot": "Tue 9 Sep 2025 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
       "count": 3,
       "participants": [
-        "Humphrey Yang",
+        "Matheus",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Bishmay Barik"
+        "Longye",
+        "shu"
       ]
     },
     {
-      "time_slot": "Thu 4 Sep 2025 16:00 - 17:00",
+      "time_slot": "Tue 9 Sep 2025 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
       "start_hour": 16,
-      "count": 3,
+      "count": 4,
       "participants": [
-        "Humphrey Yang",
+        "Matheus",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Bishmay Barik"
+        "Longye",
+        "shu"
       ]
     },
     {
-      "time_slot": "Thu 4 Sep 2025 17:00 - 18:00",
+      "time_slot": "Tue 9 Sep 2025 17:00 - 18:00",
       "time_only": "17:00 - 18:00",
       "start_hour": 17,
-      "count": 3,
+      "count": 4,
       "participants": [
-        "Humphrey Yang",
+        "Matheus",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Bishmay Barik"
-      ]
-    },
-    {
-      "time_slot": "Thu 4 Sep 2025 18:00 - 19:00",
-      "time_only": "18:00 - 19:00",
-      "start_hour": 18,
-      "count": 3,
-      "participants": [
-        "Humphrey Yang",
-        "Nisha",
-        "Longye Tian"
-      ],
-      "total_participants": 4,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Bishmay Barik"
+        "Longye",
+        "shu"
       ]
     }
   ],
-  "Fri 5": [
+  "Wed 10": [
     {
-      "time_slot": "Fri 5 Sep 2025 09:00 - 10:00",
+      "time_slot": "Wed 10 Sep 2025 08:00 - 09:00",
+      "time_only": "08:00 - 09:00",
+      "start_hour": 8,
+      "count": 7,
+      "participants": [
+        "Matheus",
+        "shu",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 10 Sep 2025 09:00 - 10:00",
       "time_only": "09:00 - 10:00",
       "start_hour": 9,
-      "count": 3,
+      "count": 7,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "shu",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 5 Sep 2025 10:00 - 11:00",
+      "time_slot": "Wed 10 Sep 2025 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
-      "count": 3,
+      "count": 7,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "shu",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 5 Sep 2025 11:00 - 12:00",
+      "time_slot": "Wed 10 Sep 2025 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
     },
     {
-      "time_slot": "Fri 5 Sep 2025 12:00 - 13:00",
+      "time_slot": "Wed 10 Sep 2025 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
-      "count": 3,
+      "count": 7,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "shu",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 5 Sep 2025 13:00 - 14:00",
+      "time_slot": "Wed 10 Sep 2025 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
-      "count": 3,
+      "count": 8,
       "participants": [
-        "Bishmay Barik",
+        "Jingni",
+        "Matheus",
+        "shu",
+        "Yiran",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 5 Sep 2025 14:00 - 15:00",
+      "time_slot": "Wed 10 Sep 2025 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Jingni",
+        "Matheus",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
     },
     {
-      "time_slot": "Fri 5 Sep 2025 15:00 - 16:00",
+      "time_slot": "Wed 10 Sep 2025 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
-      "count": 3,
+      "count": 7,
       "participants": [
-        "Bishmay Barik",
+        "Jingni",
+        "Matheus",
+        "shu",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 5 Sep 2025 16:00 - 17:00",
+      "time_slot": "Wed 10 Sep 2025 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
       "start_hour": 16,
-      "count": 3,
+      "count": 6,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "shu",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 5 Sep 2025 17:00 - 18:00",
+      "time_slot": "Wed 10 Sep 2025 17:00 - 18:00",
       "time_only": "17:00 - 18:00",
       "start_hour": 17,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Yiran",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    }
+  ],
+  "Thu 11": [
+    {
+      "time_slot": "Thu 11 Sep 2025 08:00 - 09:00",
+      "time_only": "08:00 - 09:00",
+      "start_hour": 8,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Thu 11 Sep 2025 09:00 - 10:00",
+      "time_only": "09:00 - 10:00",
+      "start_hour": 9,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Thu 11 Sep 2025 10:00 - 11:00",
+      "time_only": "10:00 - 11:00",
+      "start_hour": 10,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Thu 11 Sep 2025 11:00 - 12:00",
+      "time_only": "11:00 - 12:00",
+      "start_hour": 11,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Thu 11 Sep 2025 12:00 - 13:00",
+      "time_only": "12:00 - 13:00",
+      "start_hour": 12,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Thu 11 Sep 2025 13:00 - 14:00",
+      "time_only": "13:00 - 14:00",
+      "start_hour": 13,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Thu 11 Sep 2025 14:00 - 15:00",
+      "time_only": "14:00 - 15:00",
+      "start_hour": 14,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Thu 11 Sep 2025 15:00 - 16:00",
+      "time_only": "15:00 - 16:00",
+      "start_hour": 15,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Thu 11 Sep 2025 16:00 - 17:00",
+      "time_only": "16:00 - 17:00",
+      "start_hour": 16,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Thu 11 Sep 2025 17:00 - 18:00",
+      "time_only": "17:00 - 18:00",
+      "start_hour": 17,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    }
+  ],
+  "Fri 12": [
+    {
+      "time_slot": "Fri 12 Sep 2025 08:00 - 09:00",
+      "time_only": "08:00 - 09:00",
+      "start_hour": 8,
+      "count": 7,
+      "participants": [
+        "Matheus",
+        "shu",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 5 Sep 2025 18:00 - 19:00",
-      "time_only": "18:00 - 19:00",
-      "start_hour": 18,
-      "count": 3,
+      "time_slot": "Fri 12 Sep 2025 09:00 - 10:00",
+      "time_only": "09:00 - 10:00",
+      "start_hour": 9,
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Matheus",
+        "Camille Bergeron",
         "Nisha",
-        "Longye Tian"
+        "Longye",
+        "Humphrey"
       ],
-      "total_participants": 4,
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Fri 12 Sep 2025 10:00 - 11:00",
+      "time_only": "10:00 - 11:00",
+      "start_hour": 10,
+      "count": 5,
+      "participants": [
+        "Matheus",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Fri 12 Sep 2025 11:00 - 12:00",
+      "time_only": "11:00 - 12:00",
+      "start_hour": 11,
+      "count": 7,
+      "participants": [
+        "Matheus",
+        "shu",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
       "presenter_unavailable": false,
       "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Fri 12 Sep 2025 12:00 - 13:00",
+      "time_only": "12:00 - 13:00",
+      "start_hour": 12,
+      "count": 7,
+      "participants": [
+        "Matheus",
+        "shu",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Fri 12 Sep 2025 13:00 - 14:00",
+      "time_only": "13:00 - 14:00",
+      "start_hour": 13,
+      "count": 6,
+      "participants": [
+        "shu",
+        "Yiran",
+        "Camille Bergeron",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Fri 12 Sep 2025 14:00 - 15:00",
+      "time_only": "14:00 - 15:00",
+      "start_hour": 14,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "shu",
+        "Yiran",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Fri 12 Sep 2025 15:00 - 16:00",
+      "time_only": "15:00 - 16:00",
+      "start_hour": 15,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "shu",
+        "Yiran",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Fri 12 Sep 2025 16:00 - 17:00",
+      "time_only": "16:00 - 17:00",
+      "start_hour": 16,
+      "count": 7,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "shu",
+        "Yiran",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Fri 12 Sep 2025 17:00 - 18:00",
+      "time_only": "17:00 - 18:00",
+      "start_hour": 17,
+      "count": 6,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Yiran",
+        "Nisha",
+        "Longye",
+        "Humphrey"
+      ],
+      "total_participants": 8,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
     }
   ]
 };
-        const participants = ["Humphrey Yang", "Bishmay Barik", "Nisha", "Longye Tian"];
+        const participants = ["Jingni", "Matheus", "shu", "Yiran", "Camille Bergeron", "Nisha", "Longye", "Humphrey"];
         const totalParticipants = participants.length;
-        const presenterNames = ["Bishmay Barik", "Longye Tian"];
+        const presenterNames = ["Longye", "shu"];
         
         // Build the table
         function buildTable() {
