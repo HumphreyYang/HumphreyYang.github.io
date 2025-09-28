@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reading Group Availability Timetable - Presenters: Yiran, Longye, Nisha</title>
+    <title>Reading Group Availability Timetable - Presenters: Longye, Nisha, shu, Yiran</title>
     <style>
         * {
             margin: 0;
@@ -375,8 +375,8 @@
         
         
             <div class="presenter-info">
-                <h2>👤 Presenters: Yiran, Longye, Nisha</h2>
-                <p>Slots marked in grey (33 total) are when the presenters are unavailable (any of them)</p>
+                <h2>👤 Presenters: Longye, Nisha, shu, Yiran</h2>
+                <p>Slots marked in grey (39 total) are when the presenters are unavailable (any of them)</p>
             </div>
         
         
@@ -391,10 +391,10 @@
                     <div class="stat-label">Time Slots</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">7</div>
+                    <div class="stat-value">6</div>
                     <div class="stat-label">All Available</div>
                 </div>
-                <div class="stat-card"><div class="stat-value">33</div><div class="stat-label">Presenter(s) Unavailable</div></div>
+                <div class="stat-card"><div class="stat-value">39</div><div class="stat-label">Presenter(s) Unavailable</div></div>
             </div>
 
             <div class="controls">
@@ -404,7 +404,7 @@
                     </label>
                     <input type="text" 
                            id="presenterInput" 
-                           placeholder="e.g., shu, Bishmay Barik, Yiran"
+                           placeholder="e.g., Yiran, shu, Jingni"
                            autocomplete="off">
                     <small>Total participants: 6 | Enter any number of names to find common availability</small>
                 </div>
@@ -460,372 +460,303 @@
     <script>
         // Data from Python
         const availabilityData = {
-  "Mon 22": [
+  "Mon 29 Sep 2025": [
     {
-      "time_slot": "Mon 22 Sep 2025 08:00 - 09:00",
+      "time_slot": "Mon 29 Sep 2025 08:00 - 09:00",
       "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 1,
-      "participants": [
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Mon 22 Sep 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 1,
-      "participants": [
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Mon 22 Sep 2025 10:00 - 11:00",
-      "time_only": "10:00 - 11:00",
-      "start_hour": 10,
-      "count": 1,
-      "participants": [
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Mon 22 Sep 2025 11:00 - 12:00",
-      "time_only": "11:00 - 12:00",
-      "start_hour": 11,
-      "count": 2,
-      "participants": [
-        "Bishmay Barik",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Mon 22 Sep 2025 12:00 - 13:00",
-      "time_only": "12:00 - 13:00",
-      "start_hour": 12,
+      "start_hour": 8.0,
+      "start_minutes": 480,
+      "date_iso": "2025-09-29",
+      "display_day_short": "Mon 29 Sep",
+      "display_day_full": "Mon 29 Sep 2025",
       "count": 3,
       "participants": [
-        "Bishmay Barik",
-        "Jingni",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
         "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Mon 22 Sep 2025 13:00 - 14:00",
-      "time_only": "13:00 - 14:00",
-      "start_hour": 13,
-      "count": 4,
-      "participants": [
-        "Bishmay Barik",
         "Jingni",
-        "Longye",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Yiran"
+        "Longye",
+        "shu"
       ]
     },
     {
-      "time_slot": "Mon 22 Sep 2025 14:00 - 15:00",
-      "time_only": "14:00 - 15:00",
-      "start_hour": 14,
-      "count": 4,
+      "time_slot": "Mon 29 Sep 2025 09:00 - 10:00",
+      "time_only": "09:00 - 10:00",
+      "start_hour": 9.0,
+      "start_minutes": 540,
+      "date_iso": "2025-09-29",
+      "display_day_short": "Mon 29 Sep",
+      "display_day_full": "Mon 29 Sep 2025",
+      "count": 3,
       "participants": [
-        "Bishmay Barik",
+        "Yiran",
         "Jingni",
-        "Longye",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Yiran"
+        "Longye",
+        "shu"
       ]
     },
     {
-      "time_slot": "Mon 22 Sep 2025 15:00 - 16:00",
-      "time_only": "15:00 - 16:00",
-      "start_hour": 15,
+      "time_slot": "Mon 29 Sep 2025 10:00 - 11:00",
+      "time_only": "10:00 - 11:00",
+      "start_hour": 10.0,
+      "start_minutes": 600,
+      "date_iso": "2025-09-29",
+      "display_day_short": "Mon 29 Sep",
+      "display_day_full": "Mon 29 Sep 2025",
       "count": 4,
       "participants": [
-        "Bishmay Barik",
+        "Yiran",
         "Jingni",
-        "Longye",
+        "Bishmay",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Yiran"
+        "Longye",
+        "shu"
       ]
     },
     {
-      "time_slot": "Mon 22 Sep 2025 16:00 - 17:00",
-      "time_only": "16:00 - 17:00",
-      "start_hour": 16,
+      "time_slot": "Mon 29 Sep 2025 11:00 - 12:00",
+      "time_only": "11:00 - 12:00",
+      "start_hour": 11.0,
+      "start_minutes": 660,
+      "date_iso": "2025-09-29",
+      "display_day_short": "Mon 29 Sep",
+      "display_day_full": "Mon 29 Sep 2025",
+      "count": 4,
+      "participants": [
+        "Yiran",
+        "Jingni",
+        "Bishmay",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu"
+      ]
+    },
+    {
+      "time_slot": "Mon 29 Sep 2025 12:00 - 13:00",
+      "time_only": "12:00 - 13:00",
+      "start_hour": 12.0,
+      "start_minutes": 720,
+      "date_iso": "2025-09-29",
+      "display_day_short": "Mon 29 Sep",
+      "display_day_full": "Mon 29 Sep 2025",
       "count": 6,
       "participants": [
-        "shu",
-        "Bishmay Barik",
         "Yiran",
+        "shu",
         "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
-    }
-  ],
-  "Tue 23": [
-    {
-      "time_slot": "Tue 23 Sep 2025 08:00 - 09:00",
-      "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 1,
-      "participants": [
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
     },
     {
-      "time_slot": "Tue 23 Sep 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 1,
-      "participants": [
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Tue 23 Sep 2025 10:00 - 11:00",
-      "time_only": "10:00 - 11:00",
-      "start_hour": 10,
-      "count": 1,
-      "participants": [
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Tue 23 Sep 2025 11:00 - 12:00",
-      "time_only": "11:00 - 12:00",
-      "start_hour": 11,
-      "count": 2,
-      "participants": [
-        "Bishmay Barik",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Tue 23 Sep 2025 12:00 - 13:00",
-      "time_only": "12:00 - 13:00",
-      "start_hour": 12,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Longye",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran"
-      ]
-    },
-    {
-      "time_slot": "Tue 23 Sep 2025 13:00 - 14:00",
+      "time_slot": "Mon 29 Sep 2025 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
-      "start_hour": 13,
-      "count": 3,
+      "start_hour": 13.0,
+      "start_minutes": 780,
+      "date_iso": "2025-09-29",
+      "display_day_short": "Mon 29 Sep",
+      "display_day_full": "Mon 29 Sep 2025",
+      "count": 6,
       "participants": [
-        "Bishmay Barik",
+        "Yiran",
+        "shu",
+        "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Tue 23 Sep 2025 14:00 - 15:00",
+      "time_slot": "Mon 29 Sep 2025 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
-      "start_hour": 14,
-      "count": 3,
+      "start_hour": 14.0,
+      "start_minutes": 840,
+      "date_iso": "2025-09-29",
+      "display_day_short": "Mon 29 Sep",
+      "display_day_full": "Mon 29 Sep 2025",
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Yiran",
+        "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Yiran"
+        "shu"
       ]
     },
     {
-      "time_slot": "Tue 23 Sep 2025 15:00 - 16:00",
+      "time_slot": "Mon 29 Sep 2025 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
-      "start_hour": 15,
-      "count": 3,
+      "start_hour": 15.0,
+      "start_minutes": 900,
+      "date_iso": "2025-09-29",
+      "display_day_short": "Mon 29 Sep",
+      "display_day_full": "Mon 29 Sep 2025",
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Yiran",
+        "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Yiran"
+        "shu"
       ]
     },
     {
-      "time_slot": "Tue 23 Sep 2025 16:00 - 17:00",
+      "time_slot": "Mon 29 Sep 2025 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
-      "start_hour": 16,
-      "count": 3,
+      "start_hour": 16.0,
+      "start_minutes": 960,
+      "date_iso": "2025-09-29",
+      "display_day_short": "Mon 29 Sep",
+      "display_day_full": "Mon 29 Sep 2025",
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "Yiran",
+        "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Yiran"
+        "shu"
       ]
     }
   ],
-  "Wed 24": [
+  "Tue 30 Sep 2025": [
     {
-      "time_slot": "Wed 24 Sep 2025 08:00 - 09:00",
+      "time_slot": "Tue 30 Sep 2025 08:00 - 09:00",
       "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 3,
+      "start_hour": 8.0,
+      "start_minutes": 480,
+      "date_iso": "2025-09-30",
+      "display_day_short": "Tue 30 Sep",
+      "display_day_full": "Tue 30 Sep 2025",
+      "count": 2,
       "participants": [
-        "Yiran",
         "Jingni",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Longye"
+        "Longye",
+        "shu",
+        "Yiran"
       ]
     },
     {
-      "time_slot": "Wed 24 Sep 2025 09:00 - 10:00",
+      "time_slot": "Tue 30 Sep 2025 09:00 - 10:00",
       "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 3,
+      "start_hour": 9.0,
+      "start_minutes": 540,
+      "date_iso": "2025-09-30",
+      "display_day_short": "Tue 30 Sep",
+      "display_day_full": "Tue 30 Sep 2025",
+      "count": 2,
       "participants": [
-        "Yiran",
         "Jingni",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Longye"
+        "Longye",
+        "shu",
+        "Yiran"
       ]
     },
     {
-      "time_slot": "Wed 24 Sep 2025 10:00 - 11:00",
+      "time_slot": "Tue 30 Sep 2025 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
-      "start_hour": 10,
+      "start_hour": 10.0,
+      "start_minutes": 600,
+      "date_iso": "2025-09-30",
+      "display_day_short": "Tue 30 Sep",
+      "display_day_full": "Tue 30 Sep 2025",
       "count": 3,
       "participants": [
-        "Yiran",
         "Jingni",
+        "Bishmay",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Longye"
+        "Longye",
+        "shu",
+        "Yiran"
       ]
     },
     {
-      "time_slot": "Wed 24 Sep 2025 11:00 - 12:00",
+      "time_slot": "Tue 30 Sep 2025 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
-      "start_hour": 11,
+      "start_hour": 11.0,
+      "start_minutes": 660,
+      "date_iso": "2025-09-30",
+      "display_day_short": "Tue 30 Sep",
+      "display_day_full": "Tue 30 Sep 2025",
       "count": 4,
       "participants": [
-        "Bishmay Barik",
         "Yiran",
         "Jingni",
+        "Bishmay",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Longye"
+        "Longye",
+        "shu"
       ]
     },
     {
-      "time_slot": "Wed 24 Sep 2025 12:00 - 13:00",
+      "time_slot": "Tue 30 Sep 2025 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
-      "start_hour": 12,
-      "count": 5,
+      "start_hour": 12.0,
+      "start_minutes": 720,
+      "date_iso": "2025-09-30",
+      "display_day_short": "Tue 30 Sep",
+      "display_day_full": "Tue 30 Sep 2025",
+      "count": 6,
       "participants": [
-        "Bishmay Barik",
         "Yiran",
+        "shu",
         "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
@@ -834,15 +765,19 @@
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 24 Sep 2025 13:00 - 14:00",
+      "time_slot": "Tue 30 Sep 2025 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
-      "start_hour": 13,
+      "start_hour": 13.0,
+      "start_minutes": 780,
+      "date_iso": "2025-09-30",
+      "display_day_short": "Tue 30 Sep",
+      "display_day_full": "Tue 30 Sep 2025",
       "count": 6,
       "participants": [
-        "shu",
-        "Bishmay Barik",
         "Yiran",
+        "shu",
         "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
@@ -851,15 +786,19 @@
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 24 Sep 2025 14:00 - 15:00",
+      "time_slot": "Tue 30 Sep 2025 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
-      "start_hour": 14,
+      "start_hour": 14.0,
+      "start_minutes": 840,
+      "date_iso": "2025-09-30",
+      "display_day_short": "Tue 30 Sep",
+      "display_day_full": "Tue 30 Sep 2025",
       "count": 6,
       "participants": [
-        "shu",
-        "Bishmay Barik",
         "Yiran",
+        "shu",
         "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
@@ -868,15 +807,19 @@
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 24 Sep 2025 15:00 - 16:00",
+      "time_slot": "Tue 30 Sep 2025 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
-      "start_hour": 15,
+      "start_hour": 15.0,
+      "start_minutes": 900,
+      "date_iso": "2025-09-30",
+      "display_day_short": "Tue 30 Sep",
+      "display_day_full": "Tue 30 Sep 2025",
       "count": 6,
       "participants": [
-        "shu",
-        "Bishmay Barik",
         "Yiran",
+        "shu",
         "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
@@ -885,44 +828,57 @@
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 24 Sep 2025 16:00 - 17:00",
+      "time_slot": "Tue 30 Sep 2025 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
-      "start_hour": 16,
-      "count": 6,
+      "start_hour": 16.0,
+      "start_minutes": 960,
+      "date_iso": "2025-09-30",
+      "display_day_short": "Tue 30 Sep",
+      "display_day_full": "Tue 30 Sep 2025",
+      "count": 4,
       "participants": [
-        "shu",
-        "Bishmay Barik",
         "Yiran",
-        "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu"
+      ]
     }
   ],
-  "Thu 25": [
+  "Wed 01 Oct 2025": [
     {
-      "time_slot": "Thu 25 Sep 2025 08:00 - 09:00",
+      "time_slot": "Wed 1 Oct 2025 08:00 - 09:00",
       "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 3,
+      "start_hour": 8.0,
+      "start_minutes": 480,
+      "date_iso": "2025-10-01",
+      "display_day_short": "Wed 01 Oct",
+      "display_day_full": "Wed 01 Oct 2025",
+      "count": 2,
       "participants": [
-        "Yiran",
         "Jingni",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Longye"
+        "Longye",
+        "shu",
+        "Yiran"
       ]
     },
     {
-      "time_slot": "Thu 25 Sep 2025 09:00 - 10:00",
+      "time_slot": "Wed 1 Oct 2025 09:00 - 10:00",
       "time_only": "09:00 - 10:00",
-      "start_hour": 9,
+      "start_hour": 9.0,
+      "start_minutes": 540,
+      "date_iso": "2025-10-01",
+      "display_day_short": "Wed 01 Oct",
+      "display_day_full": "Wed 01 Oct 2025",
       "count": 2,
       "participants": [
         "Jingni",
@@ -931,51 +887,90 @@
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Yiran",
-        "Longye"
+        "Longye",
+        "shu",
+        "Yiran"
       ]
     },
     {
-      "time_slot": "Thu 25 Sep 2025 10:00 - 11:00",
+      "time_slot": "Wed 1 Oct 2025 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
-      "start_hour": 10,
-      "count": 2,
-      "participants": [
-        "Jingni",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Thu 25 Sep 2025 11:00 - 12:00",
-      "time_only": "11:00 - 12:00",
-      "start_hour": 11,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Jingni",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Thu 25 Sep 2025 12:00 - 13:00",
-      "time_only": "12:00 - 13:00",
-      "start_hour": 12,
+      "start_hour": 10.0,
+      "start_minutes": 600,
+      "date_iso": "2025-10-01",
+      "display_day_short": "Wed 01 Oct",
+      "display_day_full": "Wed 01 Oct 2025",
       "count": 4,
       "participants": [
-        "Bishmay Barik",
         "Jingni",
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Wed 1 Oct 2025 11:00 - 12:00",
+      "time_only": "11:00 - 12:00",
+      "start_hour": 11.0,
+      "start_minutes": 660,
+      "date_iso": "2025-10-01",
+      "display_day_short": "Wed 01 Oct",
+      "display_day_full": "Wed 01 Oct 2025",
+      "count": 4,
+      "participants": [
+        "Jingni",
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Wed 1 Oct 2025 12:00 - 13:00",
+      "time_only": "12:00 - 13:00",
+      "start_hour": 12.0,
+      "start_minutes": 720,
+      "date_iso": "2025-10-01",
+      "display_day_short": "Wed 01 Oct",
+      "display_day_full": "Wed 01 Oct 2025",
+      "count": 4,
+      "participants": [
+        "Jingni",
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Wed 1 Oct 2025 13:00 - 14:00",
+      "time_only": "13:00 - 14:00",
+      "start_hour": 13.0,
+      "start_minutes": 780,
+      "date_iso": "2025-10-01",
+      "display_day_short": "Wed 01 Oct",
+      "display_day_full": "Wed 01 Oct 2025",
+      "count": 5,
+      "participants": [
+        "shu",
+        "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
@@ -986,139 +981,168 @@
       ]
     },
     {
-      "time_slot": "Thu 25 Sep 2025 13:00 - 14:00",
-      "time_only": "13:00 - 14:00",
-      "start_hour": 13,
-      "count": 5,
-      "participants": [
-        "Bishmay Barik",
-        "Yiran",
-        "Jingni",
-        "Longye",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Thu 25 Sep 2025 14:00 - 15:00",
+      "time_slot": "Wed 1 Oct 2025 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
-      "start_hour": 14,
+      "start_hour": 14.0,
+      "start_minutes": 840,
+      "date_iso": "2025-10-01",
+      "display_day_short": "Wed 01 Oct",
+      "display_day_full": "Wed 01 Oct 2025",
       "count": 5,
       "participants": [
-        "Bishmay Barik",
-        "Yiran",
+        "shu",
         "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Yiran"
+      ]
     },
     {
-      "time_slot": "Thu 25 Sep 2025 15:00 - 16:00",
+      "time_slot": "Wed 1 Oct 2025 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
-      "start_hour": 15,
-      "count": 5,
+      "start_hour": 15.0,
+      "start_minutes": 900,
+      "date_iso": "2025-10-01",
+      "display_day_short": "Wed 01 Oct",
+      "display_day_full": "Wed 01 Oct 2025",
+      "count": 3,
       "participants": [
-        "Bishmay Barik",
-        "Yiran",
         "Jingni",
-        "Longye",
+        "Bishmay",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu",
+        "Yiran"
+      ]
     },
     {
-      "time_slot": "Thu 25 Sep 2025 16:00 - 17:00",
+      "time_slot": "Wed 1 Oct 2025 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
-      "start_hour": 16,
-      "count": 5,
+      "start_hour": 16.0,
+      "start_minutes": 960,
+      "date_iso": "2025-10-01",
+      "display_day_short": "Wed 01 Oct",
+      "display_day_full": "Wed 01 Oct 2025",
+      "count": 3,
       "participants": [
-        "Bishmay Barik",
-        "Yiran",
         "Jingni",
-        "Longye",
+        "Bishmay",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye",
+        "shu",
+        "Yiran"
+      ]
     }
   ],
-  "Fri 26": [
+  "Thu 02 Oct 2025": [
     {
-      "time_slot": "Fri 26 Sep 2025 08:00 - 09:00",
+      "time_slot": "Thu 2 Oct 2025 08:00 - 09:00",
       "time_only": "08:00 - 09:00",
-      "start_hour": 8,
+      "start_hour": 8.0,
+      "start_minutes": 480,
+      "date_iso": "2025-10-02",
+      "display_day_short": "Thu 02 Oct",
+      "display_day_full": "Thu 02 Oct 2025",
       "count": 2,
       "participants": [
-        "Yiran",
+        "Longye",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Longye"
+        "shu",
+        "Yiran"
       ]
     },
     {
-      "time_slot": "Fri 26 Sep 2025 09:00 - 10:00",
+      "time_slot": "Thu 2 Oct 2025 09:00 - 10:00",
       "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 1,
-      "participants": [
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Fri 26 Sep 2025 10:00 - 11:00",
-      "time_only": "10:00 - 11:00",
-      "start_hour": 10,
-      "count": 1,
-      "participants": [
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran",
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Fri 26 Sep 2025 11:00 - 12:00",
-      "time_only": "11:00 - 12:00",
-      "start_hour": 11,
+      "start_hour": 9.0,
+      "start_minutes": 540,
+      "date_iso": "2025-10-02",
+      "display_day_short": "Thu 02 Oct",
+      "display_day_full": "Thu 02 Oct 2025",
       "count": 2,
       "participants": [
-        "Bishmay Barik",
+        "Longye",
         "Nisha"
       ],
       "total_participants": 6,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Yiran",
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Thu 2 Oct 2025 10:00 - 11:00",
+      "time_only": "10:00 - 11:00",
+      "start_hour": 10.0,
+      "start_minutes": 600,
+      "date_iso": "2025-10-02",
+      "display_day_short": "Thu 02 Oct",
+      "display_day_full": "Thu 02 Oct 2025",
+      "count": 2,
+      "participants": [
+        "Bishmay",
         "Longye"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "shu",
+        "Yiran"
       ]
     },
     {
-      "time_slot": "Fri 26 Sep 2025 12:00 - 13:00",
+      "time_slot": "Thu 2 Oct 2025 11:00 - 12:00",
+      "time_only": "11:00 - 12:00",
+      "start_hour": 11.0,
+      "start_minutes": 660,
+      "date_iso": "2025-10-02",
+      "display_day_short": "Thu 02 Oct",
+      "display_day_full": "Thu 02 Oct 2025",
+      "count": 3,
+      "participants": [
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Thu 2 Oct 2025 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
-      "start_hour": 12,
-      "count": 3,
+      "start_hour": 12.0,
+      "start_minutes": 720,
+      "date_iso": "2025-10-02",
+      "display_day_short": "Thu 02 Oct",
+      "display_day_full": "Thu 02 Oct 2025",
+      "count": 5,
       "participants": [
-        "Bishmay Barik",
+        "shu",
+        "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
@@ -1129,29 +1153,194 @@
       ]
     },
     {
-      "time_slot": "Fri 26 Sep 2025 13:00 - 14:00",
+      "time_slot": "Thu 2 Oct 2025 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
-      "start_hour": 13,
-      "count": 3,
-      "participants": [
-        "Bishmay Barik",
-        "Longye",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Yiran"
-      ]
-    },
-    {
-      "time_slot": "Fri 26 Sep 2025 14:00 - 15:00",
-      "time_only": "14:00 - 15:00",
-      "start_hour": 14,
+      "start_hour": 13.0,
+      "start_minutes": 780,
+      "date_iso": "2025-10-02",
+      "display_day_short": "Thu 02 Oct",
+      "display_day_full": "Thu 02 Oct 2025",
       "count": 4,
       "participants": [
-        "Bishmay Barik",
         "Jingni",
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Thu 2 Oct 2025 14:00 - 15:00",
+      "time_only": "14:00 - 15:00",
+      "start_hour": 14.0,
+      "start_minutes": 840,
+      "date_iso": "2025-10-02",
+      "display_day_short": "Thu 02 Oct",
+      "display_day_full": "Thu 02 Oct 2025",
+      "count": 4,
+      "participants": [
+        "Jingni",
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Thu 2 Oct 2025 15:00 - 16:00",
+      "time_only": "15:00 - 16:00",
+      "start_hour": 15.0,
+      "start_minutes": 900,
+      "date_iso": "2025-10-02",
+      "display_day_short": "Thu 02 Oct",
+      "display_day_full": "Thu 02 Oct 2025",
+      "count": 4,
+      "participants": [
+        "Jingni",
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Thu 2 Oct 2025 16:00 - 17:00",
+      "time_only": "16:00 - 17:00",
+      "start_hour": 16.0,
+      "start_minutes": 960,
+      "date_iso": "2025-10-02",
+      "display_day_short": "Thu 02 Oct",
+      "display_day_full": "Thu 02 Oct 2025",
+      "count": 4,
+      "participants": [
+        "Jingni",
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    }
+  ],
+  "Fri 03 Oct 2025": [
+    {
+      "time_slot": "Fri 3 Oct 2025 08:00 - 09:00",
+      "time_only": "08:00 - 09:00",
+      "start_hour": 8.0,
+      "start_minutes": 480,
+      "date_iso": "2025-10-03",
+      "display_day_short": "Fri 03 Oct",
+      "display_day_full": "Fri 03 Oct 2025",
+      "count": 3,
+      "participants": [
+        "Jingni",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Fri 3 Oct 2025 09:00 - 10:00",
+      "time_only": "09:00 - 10:00",
+      "start_hour": 9.0,
+      "start_minutes": 540,
+      "date_iso": "2025-10-03",
+      "display_day_short": "Fri 03 Oct",
+      "display_day_full": "Fri 03 Oct 2025",
+      "count": 3,
+      "participants": [
+        "Jingni",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Fri 3 Oct 2025 10:00 - 11:00",
+      "time_only": "10:00 - 11:00",
+      "start_hour": 10.0,
+      "start_minutes": 600,
+      "date_iso": "2025-10-03",
+      "display_day_short": "Fri 03 Oct",
+      "display_day_full": "Fri 03 Oct 2025",
+      "count": 4,
+      "participants": [
+        "Jingni",
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Fri 3 Oct 2025 11:00 - 12:00",
+      "time_only": "11:00 - 12:00",
+      "start_hour": 11.0,
+      "start_minutes": 660,
+      "date_iso": "2025-10-03",
+      "display_day_short": "Fri 03 Oct",
+      "display_day_full": "Fri 03 Oct 2025",
+      "count": 4,
+      "participants": [
+        "Jingni",
+        "Bishmay",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Fri 3 Oct 2025 12:00 - 13:00",
+      "time_only": "12:00 - 13:00",
+      "start_hour": 12.0,
+      "start_minutes": 720,
+      "date_iso": "2025-10-03",
+      "display_day_short": "Fri 03 Oct",
+      "display_day_full": "Fri 03 Oct 2025",
+      "count": 5,
+      "participants": [
+        "shu",
+        "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
@@ -1162,115 +1351,150 @@
       ]
     },
     {
-      "time_slot": "Fri 26 Sep 2025 15:00 - 16:00",
-      "time_only": "15:00 - 16:00",
-      "start_hour": 15,
-      "count": 6,
+      "time_slot": "Fri 3 Oct 2025 13:00 - 14:00",
+      "time_only": "13:00 - 14:00",
+      "start_hour": 13.0,
+      "start_minutes": 780,
+      "date_iso": "2025-10-03",
+      "display_day_short": "Fri 03 Oct",
+      "display_day_full": "Fri 03 Oct 2025",
+      "count": 5,
       "participants": [
         "shu",
-        "Bishmay Barik",
-        "Yiran",
         "Jingni",
+        "Bishmay",
         "Longye",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Yiran"
+      ]
     },
     {
-      "time_slot": "Fri 26 Sep 2025 16:00 - 17:00",
-      "time_only": "16:00 - 17:00",
-      "start_hour": 16,
-      "count": 6,
+      "time_slot": "Fri 3 Oct 2025 14:00 - 15:00",
+      "time_only": "14:00 - 15:00",
+      "start_hour": 14.0,
+      "start_minutes": 840,
+      "date_iso": "2025-10-03",
+      "display_day_short": "Fri 03 Oct",
+      "display_day_full": "Fri 03 Oct 2025",
+      "count": 3,
       "participants": [
-        "shu",
-        "Bishmay Barik",
-        "Yiran",
         "Jingni",
         "Longye",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Fri 3 Oct 2025 15:00 - 16:00",
+      "time_only": "15:00 - 16:00",
+      "start_hour": 15.0,
+      "start_minutes": 900,
+      "date_iso": "2025-10-03",
+      "display_day_short": "Fri 03 Oct",
+      "display_day_full": "Fri 03 Oct 2025",
+      "count": 3,
+      "participants": [
+        "Jingni",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
+    },
+    {
+      "time_slot": "Fri 3 Oct 2025 16:00 - 17:00",
+      "time_only": "16:00 - 17:00",
+      "start_hour": 16.0,
+      "start_minutes": 960,
+      "date_iso": "2025-10-03",
+      "display_day_short": "Fri 03 Oct",
+      "display_day_full": "Fri 03 Oct 2025",
+      "count": 3,
+      "participants": [
+        "Jingni",
+        "Longye",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "shu",
+        "Yiran"
+      ]
     }
   ]
 };
-        const participants = ["shu", "Bishmay Barik", "Yiran", "Jingni", "Longye", "Nisha"];
+        const participants = ["Yiran", "shu", "Jingni", "Bishmay", "Longye", "Nisha"];
         const totalParticipants = participants.length;
-        const presenterNames = ["Yiran", "Longye", "Nisha"];
+        const presenterNames = ["Longye", "Nisha", "shu", "Yiran"];
         
         // Build the table
         function buildTable() {
             const table = document.getElementById('availabilityTable');
             table.innerHTML = '';
             
-            // Get all days and sort them
+            // Get all days and sort them using the ISO date captured in each slot
             const days = Object.keys(availabilityData).sort((a, b) => {
-                const dayOrder = {'Sun': 0, 'Mon': 1, 'Tue': 2, 'Wed': 3, 'Thu': 4, 'Fri': 5, 'Sat': 6};
-                const dayA = a.split(' ')[0];
-                const dayB = b.split(' ')[0];
-                const dateA = parseInt(a.split(' ')[1]);
-                const dateB = parseInt(b.split(' ')[1]);
-                
-                if (dayOrder[dayA] !== dayOrder[dayB]) {
-                    return dayOrder[dayA] - dayOrder[dayB];
+                const firstSlotA = availabilityData[a][0] || {};
+                const firstSlotB = availabilityData[b][0] || {};
+                const isoA = firstSlotA.date_iso || '';
+                const isoB = firstSlotB.date_iso || '';
+                if (isoA && isoB && isoA !== isoB) {
+                    return isoA < isoB ? -1 : 1;
                 }
-                return dateA - dateB;
+                if (isoA && !isoB) {
+                    return -1;
+                }
+                if (!isoA && isoB) {
+                    return 1;
+                }
+                return a.localeCompare(b);
             });
-            
+
             // Create header row
             const headerRow = document.createElement('tr');
             const timeHeader = document.createElement('th');
             timeHeader.textContent = 'Time Slot';
             timeHeader.className = 'time-header';
             headerRow.appendChild(timeHeader);
-            
+
             days.forEach(day => {
                 const dayHeader = document.createElement('th');
-                dayHeader.textContent = day + ' Sep';
+                const firstSlot = availabilityData[day][0] || {};
+                const headerLabel = firstSlot.display_day_short || day;
+                dayHeader.textContent = headerLabel;
+                dayHeader.title = firstSlot.display_day_full || day;
                 dayHeader.className = 'day-header';
                 headerRow.appendChild(dayHeader);
             });
             table.appendChild(headerRow);
-            
+
             // Get all unique time slots with proper sorting
             const timeSlotMap = new Map();
             
             days.forEach(day => {
                 availabilityData[day].forEach(slot => {
                     if (!timeSlotMap.has(slot.time_only)) {
-                        // Parse the time for sorting - handle both 24h and 12h formats
-                        let hour24;
-                        
-                        // Try 24-hour format first (e.g., "14:00 - 15:00")
-                        const match24h = slot.time_only.match(/(\d{1,2}):00\s*-\s*\d{1,2}:00/);
-                        if (match24h && !slot.time_only.includes('AM') && !slot.time_only.includes('PM')) {
-                            hour24 = parseInt(match24h[1], 10);
-                        } else {
-                            // Try 12-hour format (e.g., "2:00 PM - 3:00 PM")
-                            const match12h = slot.time_only.match(/(\d{1,2}):00\s*(AM|PM)/);
-                            if (match12h) {
-                                let hour = parseInt(match12h[1], 10);
-                                const period = match12h[2];
-                                
-                                if (period === 'AM') {
-                                    hour24 = (hour === 12) ? 0 : hour;
-                                } else {
-                                    hour24 = (hour === 12) ? 12 : hour + 12;
-                                }
-                            } else {
-                                hour24 = 0; // Default if parsing fails
-                            }
-                        }
-                        
-                        timeSlotMap.set(slot.time_only, hour24);
+                        const minutes = typeof slot.start_minutes === 'number'
+                            ? slot.start_minutes
+                            : (typeof slot.start_hour === 'number' ? slot.start_hour * 60 : 0);
+                        timeSlotMap.set(slot.time_only, minutes);
                     }
                 });
             });
-            
-            // Sort time slots by their 24-hour value
             const sortedTimeSlots = Array.from(timeSlotMap.entries())
                 .sort((a, b) => a[1] - b[1])
                 .map(entry => entry[0]);
@@ -1278,9 +1502,8 @@
             // Log for debugging
             console.log('Time slots in chronological order:');
             sortedTimeSlots.forEach((slot, idx) => {
-                console.log(`${idx + 1}. ${slot} (Hour: ${timeSlotMap.get(slot)})`);
+                console.log(`${idx + 1}. ${slot} (Minutes: ${timeSlotMap.get(slot)})`);
             });
-            
             // Create rows for each time slot
             sortedTimeSlots.forEach(timeSlot => {
                 const row = document.createElement('tr');
@@ -1329,7 +1552,8 @@
                         cell.innerHTML = cellContent;
                         cell.dataset.participants = JSON.stringify(slotData.participants);
                         cell.dataset.count = slotData.count;
-                        cell.dataset.timeSlot = `${day} Sep ${timeSlot}`;
+                        cell.dataset.timeSlot = slotData.time_slot;
+                        cell.dataset.dateIso = slotData.date_iso || '';
                         cell.dataset.presenterUnavailable = slotData.presenter_unavailable ? 'true' : 'false';
                         cell.dataset.unavailablePresenters = JSON.stringify(slotData.unavailable_presenters || []);
                     } else {
