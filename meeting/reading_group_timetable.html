@@ -225,6 +225,7 @@
             border-collapse: separate;
             border-spacing: 0;
             background: white;
+            table-layout: fixed; /* Ensure equal column widths for day columns */
         }
         
         th, td {
@@ -272,6 +273,11 @@
             left: 0;
             z-index: 5;
             border-right: 2px solid #cbd5e0;
+            width: 160px; /* Fixed width for time column */
+        }
+        
+        .time-header {
+            width: 160px; /* Match time column width */
         }
         
         .count-display {
@@ -1218,7 +1224,7 @@
             
             days.forEach(day => {
                 const dayHeader = document.createElement('th');
-                dayHeader.textContent = day + ' Sep';
+                dayHeader.textContent = day.split(' ')[0];
                 dayHeader.className = 'day-header';
                 headerRow.appendChild(dayHeader);
             });
