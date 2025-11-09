@@ -382,7 +382,7 @@
         
             <div class="presenter-info">
                 <h2>👤 Presenters: Nisha, Longye, Matheus</h2>
-                <p>Slots marked in grey (30 total) are when the presenters are unavailable (any of them)</p>
+                <p>Slots marked in grey (23 total) are when the presenters are unavailable (any of them)</p>
             </div>
         
         
@@ -397,10 +397,10 @@
                     <div class="stat-label">Time Slots</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">10</div>
+                    <div class="stat-value">16</div>
                     <div class="stat-label">All Available</div>
                 </div>
-                <div class="stat-card"><div class="stat-value">30</div><div class="stat-label">Presenter(s) Unavailable</div></div>
+                <div class="stat-card"><div class="stat-value">23</div><div class="stat-label">Presenter(s) Unavailable</div></div>
             </div>
 
             <div class="controls">
@@ -410,7 +410,7 @@
                     </label>
                     <input type="text" 
                            id="presenterInput" 
-                           placeholder="e.g., shu, Nisha, Longye"
+                           placeholder="e.g., Jingni, Nisha, Longye"
                            autocomplete="off">
                     <small>Total participants: 5 | Enter any number of names to find common availability</small>
                 </div>
@@ -466,416 +466,412 @@
     <script>
         // Data from Python
         const availabilityData = {
-  "Mon 3": [
+  "Mon 10": [
     {
-      "time_slot": "Mon 3 Nov 2025 08:00 - 09:00",
-      "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 3,
-      "participants": [
-        "Nisha",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Mon 3 Nov 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 3,
-      "participants": [
-        "Nisha",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Mon 3 Nov 2025 10:00 - 11:00",
-      "time_only": "10:00 - 11:00",
-      "start_hour": 10,
-      "count": 5,
-      "participants": [
-        "shu",
-        "Nisha",
-        "Longye",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Mon 3 Nov 2025 11:00 - 12:00",
-      "time_only": "11:00 - 12:00",
-      "start_hour": 11,
-      "count": 5,
-      "participants": [
-        "shu",
-        "Nisha",
-        "Longye",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Mon 3 Nov 2025 12:00 - 13:00",
-      "time_only": "12:00 - 13:00",
-      "start_hour": 12,
-      "count": 5,
-      "participants": [
-        "shu",
-        "Nisha",
-        "Longye",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Mon 3 Nov 2025 13:00 - 14:00",
-      "time_only": "13:00 - 14:00",
-      "start_hour": 13,
-      "count": 5,
-      "participants": [
-        "shu",
-        "Nisha",
-        "Longye",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Mon 3 Nov 2025 14:00 - 15:00",
-      "time_only": "14:00 - 15:00",
-      "start_hour": 14,
-      "count": 3,
-      "participants": [
-        "Nisha",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Mon 3 Nov 2025 15:00 - 16:00",
-      "time_only": "15:00 - 16:00",
-      "start_hour": 15,
-      "count": 3,
-      "participants": [
-        "Nisha",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Mon 3 Nov 2025 16:00 - 17:00",
-      "time_only": "16:00 - 17:00",
-      "start_hour": 16,
-      "count": 3,
-      "participants": [
-        "Nisha",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
-    }
-  ],
-  "Tue 4": [
-    {
-      "time_slot": "Tue 4 Nov 2025 08:00 - 09:00",
-      "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 3,
-      "participants": [
-        "Nisha",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Tue 4 Nov 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 3,
-      "participants": [
-        "Nisha",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Tue 4 Nov 2025 10:00 - 11:00",
-      "time_only": "10:00 - 11:00",
-      "start_hour": 10,
-      "count": 4,
-      "participants": [
-        "shu",
-        "Nisha",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Tue 4 Nov 2025 11:00 - 12:00",
-      "time_only": "11:00 - 12:00",
-      "start_hour": 11,
-      "count": 4,
-      "participants": [
-        "shu",
-        "Nisha",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
-    },
-    {
-      "time_slot": "Tue 4 Nov 2025 12:00 - 13:00",
-      "time_only": "12:00 - 13:00",
-      "start_hour": 12,
-      "count": 5,
-      "participants": [
-        "shu",
-        "Nisha",
-        "Longye",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Tue 4 Nov 2025 13:00 - 14:00",
-      "time_only": "13:00 - 14:00",
-      "start_hour": 13,
-      "count": 5,
-      "participants": [
-        "shu",
-        "Nisha",
-        "Longye",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Tue 4 Nov 2025 14:00 - 15:00",
-      "time_only": "14:00 - 15:00",
-      "start_hour": 14,
-      "count": 4,
-      "participants": [
-        "Nisha",
-        "Longye",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Tue 4 Nov 2025 15:00 - 16:00",
-      "time_only": "15:00 - 16:00",
-      "start_hour": 15,
-      "count": 4,
-      "participants": [
-        "Nisha",
-        "Longye",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Tue 4 Nov 2025 16:00 - 17:00",
-      "time_only": "16:00 - 17:00",
-      "start_hour": 16,
-      "count": 4,
-      "participants": [
-        "Nisha",
-        "Longye",
-        "Matheus",
-        "Simon"
-      ],
-      "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    }
-  ],
-  "Wed 5": [
-    {
-      "time_slot": "Wed 5 Nov 2025 08:00 - 09:00",
+      "time_slot": "Mon 10 Nov 2025 08:00 - 09:00",
       "time_only": "08:00 - 09:00",
       "start_hour": 8,
       "count": 2,
       "participants": [
-        "Nisha",
+        "Longye",
         "Simon"
       ],
       "total_participants": 5,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Longye",
+        "Nisha",
         "Matheus"
       ]
     },
     {
-      "time_slot": "Wed 5 Nov 2025 09:00 - 10:00",
+      "time_slot": "Mon 10 Nov 2025 09:00 - 10:00",
       "time_only": "09:00 - 10:00",
       "start_hour": 9,
       "count": 2,
       "participants": [
-        "Nisha",
+        "Longye",
         "Simon"
       ],
       "total_participants": 5,
       "presenter_unavailable": true,
       "unavailable_presenters": [
-        "Longye",
+        "Nisha",
         "Matheus"
       ]
     },
     {
-      "time_slot": "Wed 5 Nov 2025 10:00 - 11:00",
+      "time_slot": "Mon 10 Nov 2025 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
-      "count": 4,
+      "count": 2,
       "participants": [
-        "shu",
-        "Nisha",
         "Longye",
         "Simon"
       ],
       "total_participants": 5,
       "presenter_unavailable": true,
       "unavailable_presenters": [
+        "Nisha",
         "Matheus"
       ]
     },
     {
-      "time_slot": "Wed 5 Nov 2025 11:00 - 12:00",
+      "time_slot": "Mon 10 Nov 2025 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
-      "count": 4,
+      "count": 2,
       "participants": [
-        "shu",
-        "Nisha",
         "Longye",
         "Simon"
       ],
       "total_participants": 5,
       "presenter_unavailable": true,
       "unavailable_presenters": [
+        "Nisha",
         "Matheus"
       ]
     },
     {
-      "time_slot": "Wed 5 Nov 2025 12:00 - 13:00",
+      "time_slot": "Mon 10 Nov 2025 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
-      "count": 4,
+      "count": 2,
       "participants": [
-        "shu",
-        "Nisha",
         "Longye",
         "Simon"
       ],
       "total_participants": 5,
       "presenter_unavailable": true,
       "unavailable_presenters": [
+        "Nisha",
         "Matheus"
       ]
     },
     {
-      "time_slot": "Wed 5 Nov 2025 13:00 - 14:00",
+      "time_slot": "Mon 10 Nov 2025 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
-      "count": 4,
+      "count": 2,
       "participants": [
-        "shu",
-        "Nisha",
         "Longye",
         "Simon"
       ],
       "total_participants": 5,
       "presenter_unavailable": true,
       "unavailable_presenters": [
+        "Nisha",
         "Matheus"
       ]
     },
     {
-      "time_slot": "Wed 5 Nov 2025 14:00 - 15:00",
+      "time_slot": "Mon 10 Nov 2025 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
-      "count": 3,
+      "count": 2,
       "participants": [
-        "Nisha",
         "Longye",
         "Simon"
       ],
       "total_participants": 5,
       "presenter_unavailable": true,
       "unavailable_presenters": [
+        "Nisha",
         "Matheus"
       ]
     },
     {
-      "time_slot": "Wed 5 Nov 2025 15:00 - 16:00",
+      "time_slot": "Mon 10 Nov 2025 15:00 - 16:00",
+      "time_only": "15:00 - 16:00",
+      "start_hour": 15,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    },
+    {
+      "time_slot": "Mon 10 Nov 2025 16:00 - 17:00",
+      "time_only": "16:00 - 17:00",
+      "start_hour": 16,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    }
+  ],
+  "Tue 11": [
+    {
+      "time_slot": "Tue 11 Nov 2025 08:00 - 09:00",
+      "time_only": "08:00 - 09:00",
+      "start_hour": 8,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    },
+    {
+      "time_slot": "Tue 11 Nov 2025 09:00 - 10:00",
+      "time_only": "09:00 - 10:00",
+      "start_hour": 9,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    },
+    {
+      "time_slot": "Tue 11 Nov 2025 10:00 - 11:00",
+      "time_only": "10:00 - 11:00",
+      "start_hour": 10,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    },
+    {
+      "time_slot": "Tue 11 Nov 2025 11:00 - 12:00",
+      "time_only": "11:00 - 12:00",
+      "start_hour": 11,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    },
+    {
+      "time_slot": "Tue 11 Nov 2025 12:00 - 13:00",
+      "time_only": "12:00 - 13:00",
+      "start_hour": 12,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    },
+    {
+      "time_slot": "Tue 11 Nov 2025 13:00 - 14:00",
+      "time_only": "13:00 - 14:00",
+      "start_hour": 13,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    },
+    {
+      "time_slot": "Tue 11 Nov 2025 14:00 - 15:00",
+      "time_only": "14:00 - 15:00",
+      "start_hour": 14,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    },
+    {
+      "time_slot": "Tue 11 Nov 2025 15:00 - 16:00",
+      "time_only": "15:00 - 16:00",
+      "start_hour": 15,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    },
+    {
+      "time_slot": "Tue 11 Nov 2025 16:00 - 17:00",
+      "time_only": "16:00 - 17:00",
+      "start_hour": 16,
+      "count": 2,
+      "participants": [
+        "Longye",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Nisha",
+        "Matheus"
+      ]
+    }
+  ],
+  "Wed 12": [
+    {
+      "time_slot": "Wed 12 Nov 2025 08:00 - 09:00",
+      "time_only": "08:00 - 09:00",
+      "start_hour": 8,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Nisha",
+        "Longye",
+        "Matheus",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 12 Nov 2025 09:00 - 10:00",
+      "time_only": "09:00 - 10:00",
+      "start_hour": 9,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Nisha",
+        "Longye",
+        "Matheus",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 12 Nov 2025 10:00 - 11:00",
+      "time_only": "10:00 - 11:00",
+      "start_hour": 10,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Nisha",
+        "Longye",
+        "Matheus",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 12 Nov 2025 11:00 - 12:00",
+      "time_only": "11:00 - 12:00",
+      "start_hour": 11,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Nisha",
+        "Longye",
+        "Matheus",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 12 Nov 2025 12:00 - 13:00",
+      "time_only": "12:00 - 13:00",
+      "start_hour": 12,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Nisha",
+        "Longye",
+        "Matheus",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 12 Nov 2025 13:00 - 14:00",
+      "time_only": "13:00 - 14:00",
+      "start_hour": 13,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Nisha",
+        "Longye",
+        "Matheus",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 12 Nov 2025 14:00 - 15:00",
+      "time_only": "14:00 - 15:00",
+      "start_hour": 14,
+      "count": 4,
+      "participants": [
+        "Nisha",
+        "Longye",
+        "Matheus",
+        "Simon"
+      ],
+      "total_participants": 5,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 12 Nov 2025 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
       "count": 4,
@@ -890,7 +886,7 @@
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 5 Nov 2025 16:00 - 17:00",
+      "time_slot": "Wed 12 Nov 2025 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
       "start_hour": 16,
       "count": 4,
@@ -905,13 +901,14 @@
       "unavailable_presenters": []
     }
   ],
-  "Thu 6": [
+  "Thu 13": [
     {
-      "time_slot": "Thu 6 Nov 2025 08:00 - 09:00",
+      "time_slot": "Thu 13 Nov 2025 08:00 - 09:00",
       "time_only": "08:00 - 09:00",
       "start_hour": 8,
-      "count": 3,
+      "count": 4,
       "participants": [
+        "Jingni",
         "Nisha",
         "Matheus",
         "Simon"
@@ -923,11 +920,12 @@
       ]
     },
     {
-      "time_slot": "Thu 6 Nov 2025 09:00 - 10:00",
+      "time_slot": "Thu 13 Nov 2025 09:00 - 10:00",
       "time_only": "09:00 - 10:00",
       "start_hour": 9,
-      "count": 3,
+      "count": 4,
       "participants": [
+        "Jingni",
         "Nisha",
         "Matheus",
         "Simon"
@@ -939,60 +937,63 @@
       ]
     },
     {
-      "time_slot": "Thu 6 Nov 2025 10:00 - 11:00",
+      "time_slot": "Thu 13 Nov 2025 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
-      "count": 5,
+      "count": 4,
       "participants": [
-        "shu",
+        "Jingni",
         "Nisha",
-        "Longye",
         "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Thu 6 Nov 2025 11:00 - 12:00",
+      "time_slot": "Thu 13 Nov 2025 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
-      "count": 5,
+      "count": 4,
       "participants": [
-        "shu",
+        "Jingni",
         "Nisha",
-        "Longye",
         "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Thu 6 Nov 2025 12:00 - 13:00",
+      "time_slot": "Thu 13 Nov 2025 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
-      "count": 5,
+      "count": 4,
       "participants": [
-        "shu",
+        "Jingni",
         "Nisha",
-        "Longye",
         "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Thu 6 Nov 2025 13:00 - 14:00",
+      "time_slot": "Thu 13 Nov 2025 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
       "count": 5,
       "participants": [
-        "shu",
+        "Jingni",
         "Nisha",
         "Longye",
         "Matheus",
@@ -1003,202 +1004,199 @@
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Thu 6 Nov 2025 14:00 - 15:00",
+      "time_slot": "Thu 13 Nov 2025 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
-      "count": 3,
+      "count": 4,
       "participants": [
         "Nisha",
+        "Longye",
         "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Thu 6 Nov 2025 15:00 - 16:00",
+      "time_slot": "Thu 13 Nov 2025 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
-      "count": 3,
+      "count": 4,
       "participants": [
         "Nisha",
+        "Longye",
         "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Thu 6 Nov 2025 16:00 - 17:00",
+      "time_slot": "Thu 13 Nov 2025 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
       "start_hour": 16,
-      "count": 3,
+      "count": 4,
       "participants": [
         "Nisha",
+        "Longye",
         "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     }
   ],
-  "Fri 7": [
+  "Fri 14": [
     {
-      "time_slot": "Fri 7 Nov 2025 08:00 - 09:00",
+      "time_slot": "Fri 14 Nov 2025 08:00 - 09:00",
       "time_only": "08:00 - 09:00",
       "start_hour": 8,
-      "count": 2,
+      "count": 5,
       "participants": [
+        "Jingni",
         "Nisha",
+        "Longye",
+        "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye",
-        "Matheus"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 7 Nov 2025 09:00 - 10:00",
+      "time_slot": "Fri 14 Nov 2025 09:00 - 10:00",
       "time_only": "09:00 - 10:00",
       "start_hour": 9,
-      "count": 2,
+      "count": 5,
       "participants": [
+        "Jingni",
         "Nisha",
+        "Longye",
+        "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye",
-        "Matheus"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 7 Nov 2025 10:00 - 11:00",
+      "time_slot": "Fri 14 Nov 2025 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
-      "count": 2,
+      "count": 5,
       "participants": [
+        "Jingni",
         "Nisha",
+        "Longye",
+        "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye",
-        "Matheus"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 7 Nov 2025 11:00 - 12:00",
+      "time_slot": "Fri 14 Nov 2025 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
-      "count": 2,
+      "count": 5,
       "participants": [
+        "Jingni",
         "Nisha",
+        "Longye",
+        "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye",
-        "Matheus"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 7 Nov 2025 12:00 - 13:00",
+      "time_slot": "Fri 14 Nov 2025 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
-      "count": 2,
+      "count": 5,
       "participants": [
+        "Jingni",
         "Nisha",
+        "Longye",
+        "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye",
-        "Matheus"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 7 Nov 2025 13:00 - 14:00",
+      "time_slot": "Fri 14 Nov 2025 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
-      "count": 2,
+      "count": 5,
       "participants": [
+        "Jingni",
         "Nisha",
+        "Longye",
+        "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye",
-        "Matheus"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 7 Nov 2025 14:00 - 15:00",
+      "time_slot": "Fri 14 Nov 2025 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
-      "count": 2,
+      "count": 5,
       "participants": [
+        "Jingni",
         "Nisha",
+        "Longye",
+        "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye",
-        "Matheus"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 7 Nov 2025 15:00 - 16:00",
+      "time_slot": "Fri 14 Nov 2025 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
-      "count": 2,
+      "count": 5,
       "participants": [
+        "Jingni",
         "Nisha",
+        "Longye",
+        "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye",
-        "Matheus"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 7 Nov 2025 16:00 - 17:00",
+      "time_slot": "Fri 14 Nov 2025 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
       "start_hour": 16,
-      "count": 2,
+      "count": 5,
       "participants": [
+        "Jingni",
         "Nisha",
+        "Longye",
+        "Matheus",
         "Simon"
       ],
       "total_participants": 5,
-      "presenter_unavailable": true,
-      "unavailable_presenters": [
-        "Longye",
-        "Matheus"
-      ]
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
     }
   ]
 };
-        const participants = ["shu", "Nisha", "Longye", "Matheus", "Simon"];
+        const participants = ["Jingni", "Nisha", "Longye", "Matheus", "Simon"];
         const totalParticipants = participants.length;
         const presenterNames = ["Nisha", "Longye", "Matheus"];
         
