@@ -19,66 +19,92 @@
   <link rel="icon" href="src/Stars.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
 
   <script src="javascript/web.js"></script>
-  <style>
-    .cover h1 {
-      text-align: center;
-      font-size: calc(2em + 3vw);
-      color: white;
-      margin-bottom: 50px;
-    }
-
-    .cover {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      padding: 0;
-      background-image: url("src/bg_star.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  </style>
 </head>
 
-<body class="cover fade-in">
-    <!-- Sidebar toggle button -->
-    <button class="sidebar-toggle" onclick="toggleSidebar()">
-      <i class="fa fa-bars"></i>
-    </button>
-  
-    <!-- Collapsible sidebar -->
-    <div class="sidebar">
-      <nav class="sidebar-nav">
-        <a class="sidebar-nav-item active" href="index.html">Home</a>
-        <a class="sidebar-nav-item" href="about.html">About</a>
-        <a class="sidebar-nav-item" href="research.html">Research</a>
-        <!-- Add other links if needed -->
-      </nav>
-    </div>
+<body class="home-body fade-in">
+  <!-- Sidebar toggle button -->
+  <button class="sidebar-toggle" onclick="toggleSidebar()">
+    <i class="fa fa-bars"></i>
+  </button>
 
-  <div class="content-wrapper">
-    <h1>Humphrey Yang</h1>
-    <nav>
-      <div class="icon-text-wrapper">
-        <a href="https://github.com/HumphreyYang" class="icon-container"><i class="fa fa-github fa-fw"></i>
-          <span class="icon-text">Github</span></a>
-        <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5" class="icon-container"><i
-            class="fa fa-linkedin fa-fw"></i>
-          <span class="icon-text">LinkedIn</span></a>
-        <a href="mailto:humphrey.ziyueyang@gmail.com" class="icon-container no-fade"><i class="fa fa-envelope fa-fw"></i>
-          <span class="icon-text">Email</span></a>
-          <a href="src/humphrey_cv.pdf" class="cv-icon no-fade" class="icon-container"><i class="fa fa-address-card"></i>
-            <span class="icon-text">CV</span></a>
-            
+  <!-- Collapsible sidebar -->
+  <div class="sidebar">
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item active" href="index.html">Home</a>
+      <a class="sidebar-nav-item" href="about.html">About</a>
+      <a class="sidebar-nav-item" href="research.html">Research</a>
+      <a class="sidebar-nav-item" href="favorites.html">Favorites</a>
+      <!-- Add other links if needed -->
     </nav>
   </div>
-  
 
+  <main class="home-shell">
+    <section class="feature-hero">
+      <div class="hero-text">
+        <h1 class="hero-title">Ziyue Yang</h1>
+        <p class="legal-name">Humphrey</p>
+        <p class="lede">PhD student in economics at the Australian National University and research assistant at QuantEcon.</p>
+        <p class="byline">Based in Canberra, working on dynamic programming, machine learning, and economics.</p>
+        <!-- <p class="byline">Ex-RA at ANU RSFAS and CSIRO Data61; often found hiking around Canberra or reading about tech.</p> -->
+        <a class="text-link" href="about.html">Read more about me</a>
+        <div class="hero-actions">
+          <a class="button primary" href="research.html">Research</a>
+          <a class="button primary" href="src/humphrey_cv.pdf">CV</a>
+        </div>
+      </div>
+
+      <div class="hero-aside">
+        <div class="ribbon">Research</div>
+        <!-- <p class="signal-title">Computing resilient policy rules and safe generative tools.</p> -->
+        <div class="signal-list">
+          <div class="signal-item">
+            <p class="meta-label">Latest</p>
+            <a class="text-link" href="https://www.minneapolisfed.org/research/quarterly-review/machine-learning-a-ramsey-plan">Machine Learning a Ramsey Plan</a>
+            <p class="signal-meta">Quarterly Review (Federal Reserve Bank of Minneapolis), 2025</p>
+          </div>
+          <div class="signal-item">
+            <p class="meta-label">Working paper</p>
+            <a class="text-link download-link" href="papers/cex_dmd.pdf">Aggregate Shocks and Cross-Section Dynamics</a>
+            <p class="signal-meta">Uses additive functionals and dynamic mode decomposition to quantify redistribution and insurance in CEX income and consumption.</p>
+          </div>
+          <!-- <div class="signal-item">
+            <p class="meta-label">Teaching</p>
+            <p class="signal-meta">QuantEcon workshops and ANU sessions on Python for macroeconomics.</p>
+          </div> -->
+        </div>
+        <a class="text-link" href="research.html">View papers &amp; projects</a>
+        <div class="contact-links">
+          <a href="https://github.com/HumphreyYang" class="contact-link">
+            <i class="fa fa-github fa-fw"></i> Github
+          </a>
+          <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5" class="contact-link">
+            <i class="fa fa-linkedin fa-fw"></i> LinkedIn
+          </a>
+          <a href="mailto:humphrey.ziyueyang@gmail.com" class="contact-link no-fade">
+            <i class="fa fa-envelope fa-fw"></i> Email
+          </a>
+          <a href="favorites.html" class="contact-link">
+            <i class="fa fa-star fa-fw"></i> Favorites
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="roles">
+      <p class="section-kicker">Roles &amp; collaborations</p>
+      <ul class="roles-list">
+        <li><strong>Research assistant, QuantEcon</strong> — building open-source tools for economists.</li>
+        <li><strong>Former RA, ANU RSFAS</strong> — applied statistical learning and econometrics.</li>
+        <li><strong>Intern, CSIRO Data61</strong> — security of generative adversarial networks.</li>
+      </ul>
+    </section> -->
+  </main>
+  <footer>
+    &copy; <em id="date"></em>Humphrey Yang | My homebrewed website : )
+  </footer>
 </body>
 </html>

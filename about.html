@@ -23,21 +23,9 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script src="javascript/web.js"></script>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      background-color: #333
-    }
-
-    text {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-    }
-  </style>
 </head>
 
-<body class="fade-in">
+<body class="page-body fade-in">
   <!-- Sidebar toggle button -->
   <button class="sidebar-toggle" onclick="toggleSidebar()">
     <i class="fa fa-bars"></i>
@@ -46,9 +34,10 @@
   <!-- Collapsible sidebar -->
   <div class="sidebar">
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item active" href="index.html">Home</a>
-      <a class="sidebar-nav-item" href="about.html">About</a>
+      <a class="sidebar-nav-item" href="index.html">Home</a>
+      <a class="sidebar-nav-item active" href="about.html">About</a>
       <a class="sidebar-nav-item" href="research.html">Research</a>
+      <a class="sidebar-nav-item" href="favorites.html">Favorites</a>
       <!-- Add other links if needed -->
     </nav>
     
@@ -58,47 +47,30 @@
     </div> -->
   </div>
 
-  <div class="header">
-    <!-- <nav>
-      <a href="https://github.com/HumphreyYang"><i class="fa fa-github fa-fw"></i></a>
-      <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5"><i class="fa fa-linkedin fa-fw"></i></a>
-      <a href="mailto:humphrey.ziyueyang@outlook.com"><i class="fa fa-envelope fa-fw"></i></a>
-      <a href="src/humphrey_cv.pdf" class="cv-icon"><i class="fa fa-address-card"></i></a>
-    </nav> -->
-  </div>
+  <main class="page-shell">
+    <header class="page-header">
+      <h1 class="page-title">About me</h1>
+      <!-- <p class="page-lede">A quick snapshot of my background, research interests, and what keeps me curious.</p> -->
+    </header>
 
-  <div class="content">
-  <div class="main">
-    <h1>About me</h1>
-    <div class="stack-wrapper">
-      <figure class="image">
-        <img src="src/me.jpg" alt="Me and Henry" />
-        <!-- <figcaption>Cat in front of Kyoto Imperial Palace <br />
-          (Copyright Note: I asked for permission and had a meow as consent)
-        </figcaption> -->
-      </figure>
-      <div class="text-content">
-        <p> Hi, this is Ziyue (Humphrey) Yang. I am a PhD student in economics at Australian National University, 
-          supervized by <a href="https://johnstachurski.net/">Professor John Stachurski</a>. 
-        </p>
+    <section class="page-card">
+      <div class="stack-wrapper">
+        <figure class="image">
+          <img src="src/me.jpg" alt="Humphrey Yang" />
+        </figure>
+        <div class="text-content">
+          <p>Hi, this is Ziyue (Humphrey) Yang. I am a PhD student in economics at Australian National University, supervised by <a href="https://johnstachurski.net/">Professor John Stachurski</a>.</p>
 
-        <p>  I am also a research assistant at QuantEcon. I worked as a research assistant at ANU Research School of Finance, 
-          Actuarial Studies and Statistics (RSFAS) and a summer intern at Data61, CSIRO 
-          (where Ronald Fisher spent his final years) researching statistical learning and the security of generative adversarial networks 
-          and other forms of generative models. 
-          
-        <p> I graduated from my bachelor degrees in Data Analytics and Politics, Philosophy and Economics in 2023. 
-        </p>
+          <p>I am also a research assistant at QuantEcon. I worked as a research assistant at ANU Research School of Finance, Actuarial Studies and Statistics (RSFAS) and a summer intern at Data61, CSIRO, researching statistical learning and the security of generative adversarial models.</p>
 
-        <p> When I have free time, I enjoy hiking around Canberra (there are lots of kangaroos)! Sometimes I spend hours trying to catch up with the latest tech news.
-        </p>
+          <p>I graduated with bachelor degrees in Data Analytics and Politics, Philosophy and Economics in 2023.</p>
 
-        <p> Apart from that, I spend most of my time tweaking my programs and learning maths and economic theory with huge help from John and Tom, and a group of supportive friends at ANU.
-        </p>
+          <p>When I have free time, I enjoy hiking around Canberra (there are lots of kangaroos) and catching up with the latest tech news. I spend most of my time tweaking programs and learning maths and economic theory with help from John, Tom, and friends at ANU.</p>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+    </section>
+
+  </main>
 </body>
 <footer>
   &copy; <em id="date"></em>Humphrey Yang | My homebrewed website : )

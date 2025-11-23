@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="7wR42eYRN36x45tlgi_pGgkDodDfBNgnav2IRkK_T1c" />
-  <title>QuantEcon</title>
+  <title>Favorites</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Humphrey Yang's Personal Website">
   <link rel="icon" href="src/Stars.jpg">
@@ -12,102 +12,52 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
   <script src="javascript/web.js"></script>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      background-color: #333
-    }
-
-    text {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-    }
-  </style>
 </head>
 
-<body class="fade-in">
-  <div class="menu-bar">
-    <div class="icon-dropdown">
-      <i class="fa fa-bars" onclick="toggleDropdown()"></i>
-      <div class="dropdown-content" id="dropdownMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <!-- <a href="news.html">News</a> -->
-      </div>
-    </div>
-  </div>
+<body class="page-body fade-in">
+  <!-- Sidebar toggle button -->
+  <button class="sidebar-toggle" onclick="toggleSidebar()">
+    <i class="fa fa-bars"></i>
+  </button>
 
-  <div class="header">
-    <nav>
-      <a href="https://github.com/HumphreyYang"><i class="fa fa-github fa-fw"></i></a>
-      <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5"><i class="fa fa-linkedin fa-fw"></i></a>
-      <a href="mailto:humphrey.ziyueyang@outlook.com"><i class="fa fa-envelope fa-fw"></i></a>
-      <a href="src/humphrey_cv.pdf" class="cv-icon"><i class="fa fa-address-card"></i></a>
+  <!-- Collapsible sidebar -->
+  <div class="sidebar">
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="index.html">Home</a>
+      <a class="sidebar-nav-item" href="about.html">About</a>
+      <a class="sidebar-nav-item" href="research.html">Research</a>
+      <a class="sidebar-nav-item active" href="favorites.html">Favorites</a>
     </nav>
   </div>
 
-  <div class="main">
+  <main class="page-shell">
+    <header class="page-header">
+      <h1 class="page-title">Favorites</h1>
+      <p class="page-lede">Trails around Canberra, music, and other things I enjoy.</p>
+    </header>
 
-<head>
-  <meta charset="UTF-8">
-  <title>QuantEcon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css"> <!-- Link to existing CSS -->
-  <style>
-    body {
-      font-family: 'Palatino', 'Eulervm', serif;
-      margin: 0;
-      padding: 0;
-      background-color: #333;
-      color: #fff;
-    }
-    .content {
-      width: 90%;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    a {
-      color: rgb(21, 21, 109);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      margin-top: 20px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="content">
-    <section>
-      <h1>Favorites</h1>
-      <p> Here are some of my favorites: trails around Canberra, music, ... </p>
-      <section>
-        <h3>Trails</h3>
-
-        <p> For some good Black Mountain hiking, I recommend: </p>
-        <p align="center">
-        <iframe class="alltrails" src="https://www.alltrails.com/widget/trail/australia/australian-capital-territory/black-mountain-summit-walk?u=m&sh=empmrr" width="50%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Black Mountain Summit Walk"></iframe>
-        <iframe class="alltrails" src="https://www.alltrails.com/en-gb/widget/trail/australia/australian-capital-territory/black-mountain-loop?u=m&sh=empmrr" width="50%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Black Mountain Summit Walk"></iframe>
-        </p>
-        <p> Depending on how hard you want to push yourself. The list is undating while I try new ones</p>
+    <section class="page-card">
+      <h2>Trails</h2>
+      <p class="page-lede">Black Mountain hiking loops I keep returning to.</p>
+      <div class="trail-embeds">
+        <iframe class="embed-frame" src="https://www.alltrails.com/widget/trail/australia/australian-capital-territory/black-mountain-summit-walk?u=m&sh=empmrr" height="300" frameborder="0" scrolling="no" title="Black Mountain Summit Walk"></iframe>
+        <iframe class="embed-frame" src="https://www.alltrails.com/en-gb/widget/trail/australia/australian-capital-territory/black-mountain-loop?u=m&sh=empmrr" height="300" frameborder="0" scrolling="no" title="Black Mountain Loop"></iframe>
+      </div>
+      <p class="page-lede">Depending on how hard you want to push yourself. The list updates as I find more good climbs.</p>
     </section>
-        <h3>Music</h3>
-        <p> I recommend Laufey, Novo Amor, OST of Cowboy Bebop. Below is plate of music I put together</p>
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/playlist/taste-profile/pl.u-jV8993VuRyzN8z?l=en-GB"></iframe>
-      </section>
+
+    <section class="page-card">
+      <h2>Music</h2>
+      <p class="page-lede">Laufey, Novo Amor, and the Cowboy Bebop OST are on repeat. Here’s a mix I put together:</p>
+      <div class="embed-center">
+        <iframe class="embed-frame" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="420" style="max-width:660px; width:100%; overflow:hidden;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/playlist/taste-profile/pl.u-jV8993VuRyzN8z?l=en-GB"></iframe>
+      </div>
     </section>
-    
+  </main>
 </body>
 
 <footer>
   &copy; <em id="date"></em>Humphrey Yang | My homebrewed website : )
 </footer>
-
 </html>

@@ -21,24 +21,10 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
   <script src="javascript/web.js"></script>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      background-color: #333
-    }
-
-    text {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-    }
-  </style>
 </head>
 
-
-<body class="fade-in">
+<body class="page-body fade-in">
   <!-- Sidebar toggle button -->
   <button class="sidebar-toggle" onclick="toggleSidebar()">
     <i class="fa fa-bars"></i>
@@ -47,113 +33,87 @@
   <!-- Collapsible sidebar -->
   <div class="sidebar">
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item active" href="index.html">Home</a>
+      <a class="sidebar-nav-item" href="index.html">Home</a>
       <a class="sidebar-nav-item" href="about.html">About</a>
-      <a class="sidebar-nav-item" href="research.html">Research</a>
-      <!-- Add other links if needed -->
+      <a class="sidebar-nav-item active" href="research.html">Research</a>
+      <a class="sidebar-nav-item" href="favorites.html">Favorites</a>
     </nav>
-    
-    <!-- Optional quote section -->
-    <!-- <div class="sidebar-quote">
-      <em>"When I have free time, I enjoy hiking around Canberra..."</em>
-    </div> -->
   </div>
 
-  <div class="header">
-    <!-- <nav>
-      <a href="https://github.com/HumphreyYang"><i class="fa fa-github fa-fw"></i></a>
-      <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5"><i class="fa fa-linkedin fa-fw"></i></a>
-      <a href="mailto:humphrey.ziyueyang@outlook.com"><i class="fa fa-envelope fa-fw"></i></a>
-      <a href="src/humphrey_cv.pdf" class="cv-icon"><i class="fa fa-address-card"></i></a>
-    </nav> -->
-  </div>
+  <main class="page-shell">
+    <header class="page-header">
+      <h1 class="page-title">Research</h1>
+      <p class="page-lede">Published papers, working papers, and current projects.</p>
+    </header>
 
-  <div class="main">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Research</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css"> <!-- Link to existing CSS -->
-  <style>
-    body {
-      font-family: 'Palatino', 'Eulervm', serif;
-      margin: 0;
-      padding: 0;
-      background-color: #333;
-      color: #fff;
-    }
-    .content {
-      width: 90%;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .section {
-      margin-top: 20px;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="content">
-    <section>
-      <h1>Research</h1>
-      <p> Here is a list of published and working projects and papers</p>
-        <h3>Working papers</h3>
-        <ul>
-            <li><a href="papers/cex_dmd.pdf"> Aggregate Shocks and Cross-Section Dynamics: Quantifying Redistribution and Insurance in US Household Data </a>
-              <p> with <i><a href="http://www.tomsargent.com/">Thomas J. Sargent</a> and <a href="https://www.yjselvakumar.com/">Yatheesan J. Selvakumar</a></i></p></li>
-          <li><a href="https://arxiv.org/abs/2411.11062"> Dynamic Programming: From Local Optimality to Global Optimality </a>
-              <p> with <i><a href="https://johnstachurski.net/">John Stachurski</a> and <a href="https://sites.google.com/site/jingniyangorange/home">Jingni Yang</a></i></p></li>
-          <li><a href="papers/calvo_ml_nonlinear.pdf" class="download-link"> Machine Learning Calvo's Optimal Plan </a>
-              <p> with <i><a href="http://www.tomsargent.com/">Thomas J. Sargent</a></i></p> 
-          <li><a href="papers/calvo_main.pdf" class="download-link"> Ramsey Plan for Calvo's Model</a>
-              <p> with <i><a href="http://www.tomsargent.com/">Thomas J. Sargent</a></i></p>
-        </ul>
-        <h3>Published papers / reports</h3>
-        <ul>
-          <li><a href="https://www.minneapolisfed.org/research/quarterly-review/machine-learning-a-ramsey-plan">
-            Machine Learning a Ramsey Plan </a>
-            <p> <i>Quarterly Review, Federal Reserve Bank of Minneapolis, 2025</i></p>
-            <p> with <i>Thomas J. Sargent</i></p></li>
-          <li><a href="https://joss.theoj.org/papers/55e166343438f3a075ed40504b7bb394">QuantEcon.py: A community-based Python library for quantitative economics </a>
-          <p> <i>The Journal of Open Source Software, 2024</i></p>
-          <p> with <i>Quentin Batista et al.</i></p></li>
-          <li><a href="https://arxiv.org/abs/2303.09272"> Copyright Protection and Accountability of 
-            Generative AI: Attack, Watermarking and Attribution </a>
-            <p><i>Companion Proceedings of the ACM Web Conference, 2023</i></p>
-            <p> with <i>Haonan Zhong et al.</i></p></li>
-        </ul>
-        <h3>Research projects</h3>
-        <ul>
-          <li><a href="https://github.com/HumphreyYang/benign-overfitting">Benign Overfitting in Linear Regression with Separable
-            Variance–Covariance Structure (with Yanrong Yang and Hanlin Shang)</a></li>
-          <li><t>Privacy-preserving Record Linkage in the Presence of Missing Data using Graph Learning (with Anushka Vidanage and Thilina Ranbaduge)</t></li>
-        </ul>
-        <h3>Other projects</h3>
-        <ul>
-          <li><a href="https://quantecon.org/">QuantEcon Lectures and Workshops</a></li>
-        </ul>
-        <h3>Talks and Conference</h3>
-        <ul>
-          <li>2025: CCSS Workshop (University of Technology Sydney), 
-              Conference on Machine Learning for Economics and Finance 
-              (University of Turin), University of Sydney, 
-              Australasian Economic Theory Workshop (University of New South Wales). </li>
-        </ul> 
-        <h3>Teaching</h3>
-        <ul>
-          <li>Principles of Mathematical Statistics for Actuarial Studies (STAT6013) – Tutor, Semester 1, 2023</li>
-          <li>Statistical Learning (STAT6040) – Tutor, Semester 1, 2023</li>
-          <li>Graphical Data Analysis (STAT3011/STAT4026/STAT7026) – Marking Assistant, Semester 2, 2022</li>
-          <li>Quantitative Research Methods (STAT1008) – Tutor, Semester 2, 2022</li>
-        </ul>      
+    <section class="page-card">
+      <h2>Working papers</h2>
+      <ul class="page-list">
+        <li class="paper-item">
+          <a class="paper-link download-link" href="papers/cex_dmd.pdf"><span class="paper-title">Aggregate Shocks and Cross-Section Dynamics: Quantifying Redistribution and Insurance in US Household Data</span></a>
+          <span class="paper-meta">with Thomas J. Sargent &amp; Yatheesan J. Selvakumar</span>
+        </li>
+        <li class="paper-item">
+          <a class="paper-link" href="https://arxiv.org/abs/2411.11062"><span class="paper-title">Dynamic Programming: From Local Optimality to Global Optimality</span></a>
+          <span class="paper-meta">with John Stachurski &amp; Jingni Yang</span>
+        </li>
+        <li class="paper-item">
+          <a class="paper-link download-link" href="papers/calvo_main.pdf"><span class="paper-title">Ramsey Plan for Calvo's Model</span></a>
+          <span class="paper-meta">with Thomas J. Sargent</span>
+        </li>
+        <li class="paper-item">
+          <a class="paper-link download-link" href="papers/calvo_ml_main.pdf"><span class="paper-title">Machine Learning Calvo's Optimal Plan</span></a>
+          <span class="paper-meta">with Thomas J. Sargent</span>
+        </li>
+      </ul>
     </section>
-    
-</body>
 
+    <section class="page-card">
+      <h2>Published papers / reports</h2>
+      <ul class="page-list">
+        <li class="paper-item">
+          <a class="paper-link" href="https://www.minneapolisfed.org/research/quarterly-review/machine-learning-a-ramsey-plan"><span class="paper-title">Machine Learning a Ramsey Plan</span></a>
+          <span class="paper-meta"><em>Quarterly Review, Federal Reserve Bank of Minneapolis, 2025</em> — with Thomas J. Sargent</span>
+        </li>
+        <li class="paper-item">
+          <a class="paper-link" href="https://joss.theoj.org/papers/55e166343438f3a075ed40504b7bb394"><span class="paper-title">QuantEcon.py: A community-based Python library for quantitative economics</span></a>
+          <span class="paper-meta"><em>The Journal of Open Source Software, 2024</em> — with Quentin Batista et al.</span>
+        </li>
+        <li class="paper-item">
+          <a class="paper-link" href="https://arxiv.org/abs/2303.09272"><span class="paper-title">Copyright Protection and Accountability of Generative AI: Attack, Watermarking and Attribution</span></a>
+          <span class="paper-meta"><em>Companion Proceedings of the ACM Web Conference, 2023</em> — with Haonan Zhong et al.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- <section class="page-card projects-card">
+      <h2>Research projects</h2>
+      <ul class="page-list">
+        <li><a href="https://github.com/HumphreyYang/benign-overfitting">Benign Overfitting in Linear Regression with Separable Variance–Covariance Structure</a> — with Yanrong Yang and Hanlin Shang</li>
+        <li>Privacy-preserving Record Linkage in the Presence of Missing Data using Graph Learning — with Anushka Vidanage and Thilina Ranbaduge</li>
+      </ul>
+    </section> -->
+
+    <section class="page-card">
+      <h2>Other projects</h2>
+      <ul class="page-list">
+        <li class="paper-item">
+          <a class="paper-link" href="https://quantecon.org/"><span class="paper-title">QuantEcon Lectures and Workshops</span></a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="page-card">
+      <h2>Talks and Conference</h2>
+      <ul class="page-list">
+        <li class="paper-item">
+          <span class="paper-title">2025: CCSS Workshop (University of Technology Sydney); Conference on Machine Learning for Economics and Finance (University of Turin); University of Sydney; Australasian Economic Theory Workshop (University of New South Wales)</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
 <footer>
   &copy; <em id="date"></em>Humphrey Yang | My homebrewed website : )
 </footer>
-
 </html>
