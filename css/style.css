@@ -1028,6 +1028,15 @@ main .h1 {
   margin-left: 3px;
 }
 
+.paper-status {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--home-muted);
+  margin-left: 3px;
+}
+
 .projects-card .page-list {
   gap: 8px;
 }
