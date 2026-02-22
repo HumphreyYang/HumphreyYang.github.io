@@ -380,6 +380,11 @@
         </div>
         
         
+            <div class="presenter-info">
+                <h2>👤 Presenter: Longye</h2>
+                <p>Slots marked in grey (14 total) are when the presenter is unavailable</p>
+            </div>
+        
         
         <div class="content">
             <div class="stats">
@@ -392,10 +397,10 @@
                     <div class="stat-label">Time Slots</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">2</div>
+                    <div class="stat-value">5</div>
                     <div class="stat-label">All Available</div>
                 </div>
-                
+                <div class="stat-card"><div class="stat-value">14</div><div class="stat-label">Presenter(s) Unavailable</div></div>
             </div>
 
             <div class="controls">
@@ -405,7 +410,7 @@
                     </label>
                     <input type="text" 
                            id="presenterInput" 
-                           placeholder="e.g., Bishmay, Shu, Simon"
+                           placeholder="e.g., Shu, Jingni, Bishmay"
                            autocomplete="off">
                     <small>Total participants: 6 | Enter any number of names to find common availability</small>
                 </div>
@@ -443,7 +448,7 @@
                     <div class="legend-color available-all"></div>
                     <span>All Available</span>
                 </div>
-                
+                <div class="legend-item"><div class="legend-color presenter-unavailable"></div><span>Presenter(s) Unavailable</span></div>
                 <div class="legend-item">
                     <div class="legend-color presenter-highlight"></div>
                     <span>Selected Match</span>
@@ -461,657 +466,695 @@
     <script>
         // Data from Python
         const availabilityData = {
-  "Mon 24": [
+  "Mon 23": [
     {
-      "time_slot": "Mon 24 Nov 2025 08:00 - 09:00",
-      "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 2,
-      "participants": [
-        "Simon",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Mon 24 Nov 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 2,
-      "participants": [
-        "Simon",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Mon 24 Nov 2025 10:00 - 11:00",
+      "time_slot": "Mon 23 Feb 2026 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
       "count": 2,
       "participants": [
-        "Simon",
+        "Matheus",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Mon 24 Nov 2025 11:00 - 12:00",
+      "time_slot": "Mon 23 Feb 2026 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
-      "count": 2,
+      "count": 1,
       "participants": [
-        "Simon",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Mon 24 Nov 2025 12:00 - 13:00",
+      "time_slot": "Mon 23 Feb 2026 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
-      "count": 2,
+      "count": 1,
       "participants": [
-        "Simon",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Mon 24 Nov 2025 13:00 - 14:00",
+      "time_slot": "Mon 23 Feb 2026 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
-      "count": 2,
+      "count": 1,
       "participants": [
-        "Simon",
         "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Mon 24 Nov 2025 14:00 - 15:00",
+      "time_slot": "Mon 23 Feb 2026 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
-      "count": 4,
+      "count": 3,
       "participants": [
-        "Shu",
-        "Simon",
-        "Nisha",
-        "Jingni"
+        "Bishmay",
+        "Matheus",
+        "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Mon 24 Nov 2025 15:00 - 16:00",
+      "time_slot": "Mon 23 Feb 2026 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
+      "count": 2,
+      "participants": [
+        "Matheus",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
+    },
+    {
+      "time_slot": "Mon 23 Feb 2026 16:00 - 17:00",
+      "time_only": "16:00 - 17:00",
+      "start_hour": 16,
+      "count": 3,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
+    },
+    {
+      "time_slot": "Mon 23 Feb 2026 17:00 - 18:00",
+      "time_only": "17:00 - 18:00",
+      "start_hour": 17,
       "count": 4,
       "participants": [
-        "Shu",
-        "Simon",
+        "Jingni",
+        "Matheus",
         "Nisha",
-        "Jingni"
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Mon 24 Nov 2025 16:00 - 17:00",
-      "time_only": "16:00 - 17:00",
-      "start_hour": 16,
+      "time_slot": "Mon 23 Feb 2026 18:00 - 19:00",
+      "time_only": "18:00 - 19:00",
+      "start_hour": 18,
       "count": 4,
       "participants": [
-        "Shu",
-        "Simon",
+        "Bishmay",
+        "Matheus",
         "Nisha",
-        "Jingni"
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     }
   ],
-  "Tue 25": [
+  "Tue 24": [
     {
-      "time_slot": "Tue 25 Nov 2025 08:00 - 09:00",
-      "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 2,
-      "participants": [
-        "Simon",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Tue 25 Nov 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 2,
-      "participants": [
-        "Simon",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Tue 25 Nov 2025 10:00 - 11:00",
+      "time_slot": "Tue 24 Feb 2026 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
-      "count": 3,
+      "count": 1,
       "participants": [
-        "Bishmay",
-        "Simon",
-        "Nisha"
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Tue 25 Nov 2025 11:00 - 12:00",
+      "time_slot": "Tue 24 Feb 2026 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
-      "count": 3,
+      "count": 2,
       "participants": [
-        "Bishmay",
-        "Simon",
-        "Nisha"
+        "Matheus",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Tue 25 Nov 2025 12:00 - 13:00",
+      "time_slot": "Tue 24 Feb 2026 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
-      "count": 3,
+      "count": 2,
       "participants": [
-        "Bishmay",
-        "Simon",
-        "Nisha"
+        "Matheus",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Tue 25 Nov 2025 13:00 - 14:00",
+      "time_slot": "Tue 24 Feb 2026 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
+      "count": 2,
+      "participants": [
+        "Matheus",
+        "Longye"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Tue 24 Feb 2026 14:00 - 15:00",
+      "time_only": "14:00 - 15:00",
+      "start_hour": 14,
+      "count": 2,
+      "participants": [
+        "Matheus",
+        "Longye"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Tue 24 Feb 2026 15:00 - 16:00",
+      "time_only": "15:00 - 16:00",
+      "start_hour": 15,
       "count": 3,
       "participants": [
         "Bishmay",
-        "Simon",
-        "Nisha"
+        "Matheus",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Tue 25 Nov 2025 14:00 - 15:00",
-      "time_only": "14:00 - 15:00",
-      "start_hour": 14,
-      "count": 5,
-      "participants": [
-        "Bishmay",
-        "Shu",
-        "Simon",
-        "Nisha",
-        "Jingni"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Tue 25 Nov 2025 15:00 - 16:00",
-      "time_only": "15:00 - 16:00",
-      "start_hour": 15,
-      "count": 5,
-      "participants": [
-        "Bishmay",
-        "Shu",
-        "Simon",
-        "Nisha",
-        "Jingni"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Tue 25 Nov 2025 16:00 - 17:00",
+      "time_slot": "Tue 24 Feb 2026 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
       "start_hour": 16,
       "count": 5,
       "participants": [
+        "Jingni",
         "Bishmay",
-        "Shu",
-        "Simon",
+        "Matheus",
         "Nisha",
-        "Jingni"
+        "Longye"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Tue 24 Feb 2026 17:00 - 18:00",
+      "time_only": "17:00 - 18:00",
+      "start_hour": 17,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Bishmay",
+        "Matheus",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Tue 24 Feb 2026 18:00 - 19:00",
+      "time_only": "18:00 - 19:00",
+      "start_hour": 18,
+      "count": 5,
+      "participants": [
+        "Jingni",
+        "Bishmay",
+        "Matheus",
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     }
   ],
-  "Wed 26": [
+  "Wed 25": [
     {
-      "time_slot": "Wed 26 Nov 2025 08:00 - 09:00",
-      "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 3,
-      "participants": [
-        "Simon",
-        "Matheus",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Wed 26 Nov 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 3,
-      "participants": [
-        "Simon",
-        "Matheus",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Wed 26 Nov 2025 10:00 - 11:00",
+      "time_slot": "Wed 25 Feb 2026 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
       "count": 4,
       "participants": [
-        "Bishmay",
-        "Simon",
+        "Jingni",
         "Matheus",
-        "Nisha"
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 26 Nov 2025 11:00 - 12:00",
+      "time_slot": "Wed 25 Feb 2026 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
-      "count": 4,
+      "count": 3,
       "participants": [
-        "Bishmay",
-        "Simon",
-        "Matheus",
-        "Nisha"
+        "Jingni",
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 26 Nov 2025 12:00 - 13:00",
+      "time_slot": "Wed 25 Feb 2026 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
-      "count": 4,
+      "count": 3,
       "participants": [
-        "Bishmay",
-        "Simon",
-        "Matheus",
-        "Nisha"
+        "Jingni",
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 26 Nov 2025 13:00 - 14:00",
+      "time_slot": "Wed 25 Feb 2026 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
-      "count": 4,
+      "count": 3,
       "participants": [
-        "Bishmay",
-        "Simon",
-        "Matheus",
-        "Nisha"
+        "Jingni",
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 26 Nov 2025 14:00 - 15:00",
+      "time_slot": "Wed 25 Feb 2026 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
       "count": 6,
       "participants": [
-        "Bishmay",
         "Shu",
-        "Simon",
+        "Jingni",
+        "Bishmay",
         "Matheus",
         "Nisha",
-        "Jingni"
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 26 Nov 2025 15:00 - 16:00",
+      "time_slot": "Wed 25 Feb 2026 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
       "count": 6,
       "participants": [
-        "Bishmay",
         "Shu",
-        "Simon",
+        "Jingni",
+        "Bishmay",
         "Matheus",
         "Nisha",
-        "Jingni"
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Wed 26 Nov 2025 16:00 - 17:00",
+      "time_slot": "Wed 25 Feb 2026 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
       "start_hour": 16,
-      "count": 5,
+      "count": 6,
       "participants": [
+        "Shu",
+        "Jingni",
         "Bishmay",
-        "Simon",
         "Matheus",
         "Nisha",
-        "Jingni"
+        "Longye"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 25 Feb 2026 17:00 - 18:00",
+      "time_only": "17:00 - 18:00",
+      "start_hour": 17,
+      "count": 6,
+      "participants": [
+        "Shu",
+        "Jingni",
+        "Bishmay",
+        "Matheus",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Wed 25 Feb 2026 18:00 - 19:00",
+      "time_only": "18:00 - 19:00",
+      "start_hour": 18,
+      "count": 4,
+      "participants": [
+        "Bishmay",
+        "Matheus",
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     }
   ],
-  "Thu 27": [
+  "Thu 26": [
     {
-      "time_slot": "Thu 27 Nov 2025 08:00 - 09:00",
-      "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 2,
-      "participants": [
-        "Simon",
-        "Matheus"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Thu 27 Nov 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 2,
-      "participants": [
-        "Simon",
-        "Matheus"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Thu 27 Nov 2025 10:00 - 11:00",
+      "time_slot": "Thu 26 Feb 2026 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
       "count": 2,
       "participants": [
-        "Simon",
-        "Matheus"
+        "Matheus",
+        "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Thu 27 Nov 2025 11:00 - 12:00",
+      "time_slot": "Thu 26 Feb 2026 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
       "count": 2,
       "participants": [
-        "Simon",
-        "Matheus"
+        "Matheus",
+        "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Thu 27 Nov 2025 12:00 - 13:00",
+      "time_slot": "Thu 26 Feb 2026 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
       "count": 2,
       "participants": [
-        "Simon",
-        "Matheus"
+        "Matheus",
+        "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Thu 27 Nov 2025 13:00 - 14:00",
+      "time_slot": "Thu 26 Feb 2026 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
       "count": 2,
       "participants": [
-        "Simon",
-        "Matheus"
+        "Matheus",
+        "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Thu 27 Nov 2025 14:00 - 15:00",
+      "time_slot": "Thu 26 Feb 2026 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
       "count": 3,
       "participants": [
-        "Simon",
+        "Bishmay",
         "Matheus",
-        "Jingni"
+        "Nisha"
       ],
       "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
     },
     {
-      "time_slot": "Thu 27 Nov 2025 15:00 - 16:00",
+      "time_slot": "Thu 26 Feb 2026 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
-      "count": 3,
+      "count": 5,
       "participants": [
-        "Simon",
+        "Shu",
+        "Jingni",
+        "Bishmay",
         "Matheus",
-        "Jingni"
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
+    },
+    {
+      "time_slot": "Thu 26 Feb 2026 16:00 - 17:00",
+      "time_only": "16:00 - 17:00",
+      "start_hour": 16,
+      "count": 5,
+      "participants": [
+        "Shu",
+        "Jingni",
+        "Bishmay",
+        "Matheus",
+        "Nisha"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": true,
+      "unavailable_presenters": [
+        "Longye"
+      ]
+    },
+    {
+      "time_slot": "Thu 26 Feb 2026 17:00 - 18:00",
+      "time_only": "17:00 - 18:00",
+      "start_hour": 17,
+      "count": 6,
+      "participants": [
+        "Shu",
+        "Jingni",
+        "Bishmay",
+        "Matheus",
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Thu 27 Nov 2025 16:00 - 17:00",
-      "time_only": "16:00 - 17:00",
-      "start_hour": 16,
-      "count": 3,
+      "time_slot": "Thu 26 Feb 2026 18:00 - 19:00",
+      "time_only": "18:00 - 19:00",
+      "start_hour": 18,
+      "count": 5,
       "participants": [
-        "Simon",
+        "Shu",
+        "Bishmay",
         "Matheus",
-        "Jingni"
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     }
   ],
-  "Fri 28": [
+  "Fri 27": [
     {
-      "time_slot": "Fri 28 Nov 2025 08:00 - 09:00",
-      "time_only": "08:00 - 09:00",
-      "start_hour": 8,
-      "count": 3,
-      "participants": [
-        "Simon",
-        "Matheus",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Fri 28 Nov 2025 09:00 - 10:00",
-      "time_only": "09:00 - 10:00",
-      "start_hour": 9,
-      "count": 3,
-      "participants": [
-        "Simon",
-        "Matheus",
-        "Nisha"
-      ],
-      "total_participants": 6,
-      "presenter_unavailable": false,
-      "unavailable_presenters": []
-    },
-    {
-      "time_slot": "Fri 28 Nov 2025 10:00 - 11:00",
+      "time_slot": "Fri 27 Feb 2026 10:00 - 11:00",
       "time_only": "10:00 - 11:00",
       "start_hour": 10,
       "count": 4,
       "participants": [
-        "Bishmay",
-        "Simon",
+        "Jingni",
         "Matheus",
-        "Nisha"
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 28 Nov 2025 11:00 - 12:00",
+      "time_slot": "Fri 27 Feb 2026 11:00 - 12:00",
       "time_only": "11:00 - 12:00",
       "start_hour": 11,
       "count": 4,
       "participants": [
-        "Bishmay",
-        "Simon",
+        "Jingni",
         "Matheus",
-        "Nisha"
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 28 Nov 2025 12:00 - 13:00",
+      "time_slot": "Fri 27 Feb 2026 12:00 - 13:00",
       "time_only": "12:00 - 13:00",
       "start_hour": 12,
       "count": 4,
       "participants": [
-        "Bishmay",
-        "Simon",
+        "Jingni",
         "Matheus",
-        "Nisha"
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 28 Nov 2025 13:00 - 14:00",
+      "time_slot": "Fri 27 Feb 2026 13:00 - 14:00",
       "time_only": "13:00 - 14:00",
       "start_hour": 13,
-      "count": 4,
+      "count": 5,
       "participants": [
-        "Bishmay",
-        "Simon",
+        "Shu",
+        "Jingni",
         "Matheus",
-        "Nisha"
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 28 Nov 2025 14:00 - 15:00",
+      "time_slot": "Fri 27 Feb 2026 14:00 - 15:00",
       "time_only": "14:00 - 15:00",
       "start_hour": 14,
       "count": 5,
       "participants": [
-        "Bishmay",
-        "Simon",
+        "Shu",
+        "Jingni",
         "Matheus",
         "Nisha",
-        "Jingni"
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 28 Nov 2025 15:00 - 16:00",
+      "time_slot": "Fri 27 Feb 2026 15:00 - 16:00",
       "time_only": "15:00 - 16:00",
       "start_hour": 15,
       "count": 5,
       "participants": [
-        "Bishmay",
-        "Simon",
+        "Shu",
+        "Jingni",
         "Matheus",
         "Nisha",
-        "Jingni"
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
       "unavailable_presenters": []
     },
     {
-      "time_slot": "Fri 28 Nov 2025 16:00 - 17:00",
+      "time_slot": "Fri 27 Feb 2026 16:00 - 17:00",
       "time_only": "16:00 - 17:00",
       "start_hour": 16,
       "count": 5,
       "participants": [
-        "Bishmay",
-        "Simon",
+        "Shu",
+        "Jingni",
         "Matheus",
         "Nisha",
-        "Jingni"
+        "Longye"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Fri 27 Feb 2026 17:00 - 18:00",
+      "time_only": "17:00 - 18:00",
+      "start_hour": 17,
+      "count": 5,
+      "participants": [
+        "Shu",
+        "Jingni",
+        "Matheus",
+        "Nisha",
+        "Longye"
+      ],
+      "total_participants": 6,
+      "presenter_unavailable": false,
+      "unavailable_presenters": []
+    },
+    {
+      "time_slot": "Fri 27 Feb 2026 18:00 - 19:00",
+      "time_only": "18:00 - 19:00",
+      "start_hour": 18,
+      "count": 4,
+      "participants": [
+        "Jingni",
+        "Matheus",
+        "Nisha",
+        "Longye"
       ],
       "total_participants": 6,
       "presenter_unavailable": false,
@@ -1119,9 +1162,9 @@
     }
   ]
 };
-        const participants = ["Bishmay", "Shu", "Simon", "Matheus", "Nisha", "Jingni"];
+        const participants = ["Shu", "Jingni", "Bishmay", "Matheus", "Nisha", "Longye"];
         const totalParticipants = participants.length;
-        const presenterNames = null;
+        const presenterNames = ["Longye"];
         
         // Build the table
         function buildTable() {
