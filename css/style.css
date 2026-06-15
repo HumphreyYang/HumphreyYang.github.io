@@ -796,6 +796,15 @@ main .h1 {
   font-family: 'Work Sans', sans-serif;
 }
 
+.signal-date {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--home-accent);
+  margin: 8px 0 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -1033,6 +1042,14 @@ main .h1 {
   font-family: 'Work Sans', sans-serif;
   font-size: 0.88rem;
   font-style: italic;
+  color: var(--home-muted);
+  margin-left: 3px;
+}
+
+.paper-date {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.85rem;
   color: var(--home-muted);
   margin-left: 3px;
 }
