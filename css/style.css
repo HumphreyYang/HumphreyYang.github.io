@@ -1054,6 +1054,58 @@ main .h1 {
   margin-left: 3px;
 }
 
+.paper-abstract {
+  margin: 5px 0 2px 3px;
+}
+
+.paper-abstract summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 1px 0;
+  color: var(--home-muted);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.paper-abstract summary::-webkit-details-marker {
+  display: none;
+}
+
+.paper-abstract summary::after {
+  content: "+";
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.paper-abstract[open] summary::after {
+  content: "\2212";
+}
+
+.paper-abstract summary:hover,
+.paper-abstract summary:focus-visible {
+  color: var(--home-accent-2);
+}
+
+.paper-abstract summary:focus-visible {
+  outline: 1px solid var(--home-accent);
+  outline-offset: 3px;
+}
+
+.page-card .paper-abstract p {
+  margin: 7px 0 3px;
+  padding: 2px 0 2px 12px;
+  border-left: 2px solid var(--home-border);
+  color: var(--home-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
 .projects-card .page-list {
   gap: 8px;
 }

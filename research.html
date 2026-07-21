@@ -21,6 +21,15 @@
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <script src="javascript/web.js"></script>
 </head>
 
@@ -43,7 +52,7 @@
   <main class="page-shell">
     <header class="page-header">
       <h1 class="page-title">Research</h1>
-      <p class="page-lede">Published papers, working papers, and current projects.</p>
+      <p class="page-lede">Published papers, working papers, and current projects. Select “Abstract” to read each paper’s original abstract.</p>
     </header>
 
     <section class="page-card">
@@ -52,38 +61,70 @@
         <li class="paper-item">
           <a class="paper-link" href="https://arxiv.org/abs/2607.17073"><span class="paper-title">Faithful Decoding</span></a>
           <span class="paper-meta">with Nisha Peng, John Stachurski &amp; Jingni Yang</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>This paper studies transformations that increase efficiency in solving equilibrium systems without information loss. Our approach exploits order-theoretic structure commonly found in economic problems to obtain conditions under which high-dimensional systems can be transformed into low-dimensional systems while preserving exact relationships between their solutions. The transformations can also be used for purposes other than dimensionality reduction, such as simplifying analysis and facilitating stochastic approximation routines. The theoretical ideas are illustrated using applications from economics and finance. In a real option problem, we demonstrate speed gains of up to 70,000 times.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link download-link" href="papers/mms_alpha.pdf"><span class="paper-title">How Should I Trade? Stationary Nash, Self-Confirming, and Learned Equilibria in Kiyotaki–Wright Exchange Economies</span></a>
           <span class="paper-meta">with Thomas J. Sargent</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>We study a pure exchange economy with bilateral anonymous trade and random matching. There are no markets, no credit, and no auctioneer, and double coincidences of wants are rare. Many profitable trades therefore require accepting a good for resale rather than for immediate consumption, giving rise to a medium of exchange. Kiyotaki and Wright [1989] characterize the steady-state Nash equilibria in which agents are born knowing equilibrium distributions. We work with the corresponding stationary Markov Nash equilibria in an average-reward formulation and ask whether such an equilibrium can emerge when agents do not observe equilibrium distributions and instead learn from bilateral encounters. We compare three equilibrium concepts along a spectrum: a stationary Nash equilibrium, a restricted-information self-confirming equilibrium [Fudenberg and Levine, 1993], and agents who learn from past play. Relative value iteration computes stationary Nash equilibria. A restricted-information fixed-point solver computes self-confirming equilibria. A tabular MuZero-inspired self-play algorithm [Schrittwieser et al., 2020] represents agents who plan with empirical models built from records of realized encounters.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link download-link" href="papers/dmd_robust.pdf"><span class="paper-title">Welfare Consequences of Doubts about CEX Consumption Dynamics</span></a>
           <span class="paper-meta">with Thomas J. Sargent</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>This paper computes welfare costs of risks and of model uncertainties for heterogeneous consumers whose well-being depends on consumption dynamics. We equip each consumer with preferences that express doubts about two components of their model of consumption dynamics: (1) a linear–Gaussian law of motion for quantile-specific consumption, and (2) a Markov chain for cross-percentile transitions. Relative entropy penalty parameters $\theta_{\varepsilon}$ and $\theta_{\Pi}$ determine sets of possible distortions to the probability distribution of shocks to the law of motion for quantile-specific consumption and to the transition matrix across quantiles, respectively. Alternative settings of $\theta_{\varepsilon}$, $\theta_{\Pi}$ activate these components of consumers’ specification concerns. We study four cases: no misspecification concerns (Case 0), concerns about dynamics alone (Case 1), mobility alone (Case 2), and both (Case 3). Applied to Consumer Expenditure Survey data (1990–2024), with robustness parameters calibrated via detection-error probabilities, our baseline calibrated compensating-difference measure $\alpha$ exhibits the ordering $\alpha(0) &lt; \alpha(1) &lt; \alpha(2) &lt; \alpha(3)$ with a three- to fourfold amplification of welfare costs with all robustness turned on. Doubts about mobility across quantiles bring larger welfare costs than doubts about within-quantile dynamics.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link download-link" href="papers/cex_dmd.pdf"><span class="paper-title">Aggregate Shocks and Cross-Section Dynamics: Quantifying Redistribution and Insurance in US Household Data</span></a>
           <span class="paper-meta">with Thomas J. Sargent &amp; Yatheesan J. Selvakumar</span>
           <span class="paper-status">Accepted by Journal of Political Economy Macroeconomics</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>We use additive functionals and dynamic mode decompositions to analyze the co-evolution of cross-sections of private income, post-tax-and-transfer income, and consumption in the Consumer Expenditure Survey (CEX) from 1990 to 2023. After quantifying how cross-sectional inequality and redistribution interact with aggregate income, we construct value functions for quantiles of synthetic consumers who are exposed to both i.i.d. and serially correlated risks in income and consumption growth rates. For the median household, welfare costs from serially correlated risk are an order of magnitude larger than welfare costs from i.i.d. risk. For each quantile, we also compare benefits of eliminating risks in consumption growth with benefits from participating in the US tax-and-transfer system. In absolute values, benefits from the latter, which are positive (negative) for low (high) quantile consumers, far exceed those from the former.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link download-link" href="papers/main_revision.pdf"><span class="paper-title">Dynamic Mode Decompositions and Vector Autoregressions</span></a>
           <span class="paper-meta">with Thomas J. Sargent &amp; Yatheesan J. Selvakumar</span>
           <span class="paper-status">Accepted by International Economic Review</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>We establish connections between dynamic mode decompositions (DMDs), vector autoregressions, and linear state-space models, showing that DMD provides a computationally efficient, SVD-based estimator of low-rank first-order VAR projection coefficients in high-dimensional settings. When the measurement matrix has full column rank, the recovered nonzero eigenvalues coincide with those of the underlying state transition matrix. We apply DMD to a 100-household heterogeneous-agent economy with complete markets and Gorman aggregation. From high-dimensional household income and consumption panels, DMD successfully recovers low-dimensional aggregate dynamics: estimated modes track latent aggregate states with correlations exceeding 0.90, and cross-sectional loadings reveal the sharing rule governing redistribution. This demonstrates DMD’s capacity to extract economically meaningful low-dimensional structure from microeconomic panels.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link download-link" href="papers/main_leamer.pdf"><span class="paper-title">Matching a Ramsey Model to a Descriptive Statistical Model</span></a>
           <span class="paper-meta">with Thomas J. Sargent </span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>This paper uses a two-stage specification search to study growth miracles in China, Singapore, and South Korea. The first stage estimates a scalar additive-functional model that decomposes per capita GDP into deterministic trend, martingale, and stationary components. Bayesian posterior estimates indicate highly persistent transient growth gaps and substantial volatility. The second stage uses the method of simulated moments to calibrate a stochastic Ramsey growth model that replicates key moments of the estimated statistical model. Specification searches over the long-run growth parameter $\nu$ reveal that fixing $\nu = 0.02$ to match US growth systematically understates high-growth outcomes for China, while estimating $\nu$ separately for each economy improves the fit of both statistical and structural models. Our analysis illustrates how priors and likelihoods jointly determine posterior distributions and inferences about parameters.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link" href="https://arxiv.org/abs/2411.11062"><span class="paper-title">Dynamic Programming: From Local Optimality to Global Optimality</span></a>
           <span class="paper-meta">with John Stachurski &amp; Jingni Yang</span>
           <span class="paper-status">Revise and Resubmit at Journal of Economic Theory</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>In the theory of dynamic programming, an optimal policy is a policy whose lifetime value dominates that of all other policies from every possible initial condition in the state space. This raises a natural question: when does optimality from a single state imply optimality from every state? Working in a general setting, we provide sufficient conditions for this property that relate to reachability and irreducibility. Our results have significant implications for modern policy-based algorithms used to solve large-scale dynamic programs. We illustrate our findings by applying them to an optimal savings problem via an algorithm that implements gradient ascent in a policy space constructed from neural networks.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link download-link" href="papers/calvo_ml_nonlinear.pdf"><span class="paper-title">Machine Learning Calvo's Optimal Plan</span></a>
           <span class="paper-meta">with Thomas J. Sargent</span>
           <span class="paper-status">Accepted by Journal of Economic Dynamics and Control</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>A computer program calculates a pair of infinite sequences of money creation and price level inflation rates $(\vec{\theta}, \vec{\mu})$ that maximizes a benevolent time 0 government’s objective function. The limit of a monotonically declining sequence of continuation values is a worst continuation value associated with a “timeless perspective”. The time-invariant inflation rate associated with the worst continuation Ramsey plan is not the inflation rate associated with a restricted Ramsey plan in which a time 0 government is constrained to choose a time-invariant money creation rate. We Bellmanize the continuation Ramsey problem.</p>
+          </details>
         </li>
       </ul>
     </section>
@@ -95,21 +136,37 @@
           <a class="paper-link" href="https://www.minneapolisfed.org/research/quarterly-review/ramsey-plan-for-calvos-model"><span class="paper-title">Ramsey Plan for Calvo’s Model</span></a>
           <span class="paper-meta"><em>Quarterly Review, Federal Reserve Bank of Minneapolis, 2025</em></span>
           <span class="paper-meta"> with Thomas J. Sargent</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>Bellman equations for a continuation Ramsey plan and an inflation target determine a pair of infinite sequences of money creation and price level inflation rates that maximizes a benevolent time 0 government’s objective function for a model of Calvo (1978). Dynamic programming provides a recursive representation of the optimal plan in which a promised inflation rate is the state variable that summarizes a continuation of a money growth sequence.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link" href="https://www.minneapolisfed.org/research/quarterly-review/machine-learning-a-ramsey-plan"><span class="paper-title">Machine Learning a Ramsey Plan</span></a>
           <span class="paper-meta"><em>Quarterly Review, Federal Reserve Bank of Minneapolis, 2025</em></span>
           <span class="paper-meta"> with Thomas J. Sargent</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>We use a Python program to calculate a pair $(\vec{\theta}, \vec{\mu})$ of infinite sequences of money creation and price level inflation rates that maximizes a benevolent time 0 government’s quadratic objective function for a linear-quadratic version of Calvo (1978). The program computes an open-loop representation of the optimal plan and an associated monotonically declining, bounded from below, sequence of continuation values whose limit is a worst continuation value that is associated with a “timeless perspective”. We run some least squares regressions on fake data to try to learn about the structure of the optimal plan but are stymied by not knowing what variables should be on the right and left sides of our regressions. We use literary arguments to decide that, but they are inconclusive.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link" href="https://joss.theoj.org/papers/55e166343438f3a075ed40504b7bb394"><span class="paper-title">QuantEcon.py: A community-based Python library for quantitative economics</span></a>
           <span class="paper-meta"><em>The Journal of Open Source Software, 2024</em></span>
           <span class="paper-meta"> with Quentin Batista et al.</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>Economics traditionally relied on tractable mathematical models, diagrams, and simple regression methods to analyze and understand economic phenomena. However, in recent decades, economists have increasingly shifted towards more computationally challenging problems, involving large numbers of heterogeneous agents and complex nonlinear interactions. QuantEcon.py is an open-source Python library that helps to support this shift towards more computational intensive research in the field of economics. First released in 2014, QuantEcon.py has been under continuous development for around 9 years. The library includes a wide range of functions for economic analysis, including numerical methods, data visualization, estimation, and dynamic programming, implementing a number of fundamental algorithms used in high performance computational economics. In this article we review the key features of the library.</p>
+          </details>
         </li>
         <li class="paper-item">
           <a class="paper-link" href="https://arxiv.org/abs/2303.09272"><span class="paper-title">Copyright Protection and Accountability of Generative AI: Attack, Watermarking and Attribution</span></a>
           <span class="paper-meta"><em>Companion Proceedings of the ACM Web Conference, 2023</em></span>
           <span class="paper-meta"> with Haonan Zhong et al.</span>
+          <details class="paper-abstract">
+            <summary>Abstract</summary>
+            <p>Generative AI (e.g., Generative Adversarial Networks - GANs) has become increasingly popular in recent years. However, Generative AI introduces significant concerns regarding the protection of Intellectual Property Rights (IPR) (resp. model accountability) pertaining to images (resp. toxic images) and models (resp. poisoned models) generated. In this paper, we propose an evaluation framework to provide a comprehensive overview of the current state of the copyright protection measures for GANs, evaluate their performance across a diverse range of GAN architectures, and identify the factors that affect their performance and future research directions. Our findings indicate that the current IPR protection methods for input images, model watermarking, and attribution networks are largely satisfactory for a wide range of GANs. We highlight that further attention must be directed towards protecting training sets, as the current approaches fail to provide robust IPR protection and provenance tracing on training sets.</p>
+          </details>
         </li>
       </ul>
     </section>
