@@ -18,8 +18,8 @@
   <meta name="description" content="Humphrey Yang's Personal Website">
   <link rel="icon" href="src/Stars.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script>
     window.MathJax = {
@@ -30,26 +30,24 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script src="javascript/web.js"></script>
+  <script defer src="javascript/web.js"></script>
 </head>
 
-<body class="page-body fade-in">
-  <!-- Sidebar toggle button -->
-  <button class="sidebar-toggle" onclick="toggleSidebar()">
-    <i class="fa fa-bars"></i>
-  </button>
-
-  <!-- Collapsible sidebar -->
-  <div class="sidebar">
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="index.html">Home</a>
-      <a class="sidebar-nav-item" href="about.html">About</a>
-      <a class="sidebar-nav-item active" href="research.html">Research</a>
-      <a class="sidebar-nav-item" href="favorites.html">Favorites</a>
+<body class="page-body research-page fade-in">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="site-mark" href="index.html" aria-label="Home">
+      <img src="src/magician-cat.svg" width="40" height="40" alt="">
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" aria-current="page" href="research.html">Research</a>
+      <a href="favorites.html">Favorites</a>
     </nav>
-  </div>
+  </header>
 
-  <main class="page-shell">
+  <main id="main-content" tabindex="-1" class="page-shell">
     <header class="page-header">
       <h1 class="page-title">Research</h1>
       <p class="page-lede">Published papers, working papers, and current projects.</p>
@@ -197,8 +195,9 @@
       </ul>
     </section>
   </main>
+  <footer>
+    <span>&copy; <em id="date"></em> Humphrey Yang</span>
+    <span>My homebrewed website : )</span>
+  </footer>
 </body>
-<footer>
-  &copy; <em id="date"></em>Humphrey Yang | My homebrewed website : )
-</footer>
 </html>

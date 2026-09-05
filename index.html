@@ -18,31 +18,28 @@
   <meta name="description" content="Humphrey Yang's Personal Website">
   <link rel="icon" href="src/Stars.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
 
-  <script src="javascript/web.js"></script>
+  <script defer src="javascript/web.js"></script>
 </head>
 
 <body class="home-body fade-in">
-  <!-- Sidebar toggle button -->
-  <button class="sidebar-toggle" onclick="toggleSidebar()">
-    <i class="fa fa-bars"></i>
-  </button>
-
-  <!-- Collapsible sidebar -->
-  <div class="sidebar">
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item active" href="index.html">Home</a>
-      <a class="sidebar-nav-item" href="about.html">About</a>
-      <a class="sidebar-nav-item" href="research.html">Research</a>
-      <a class="sidebar-nav-item" href="favorites.html">Favorites</a>
-      <!-- Add other links if needed -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="site-mark" href="index.html" aria-label="Home">
+      <img src="src/magician-cat.svg" width="40" height="40" alt="">
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="active" aria-current="page" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="favorites.html">Favorites</a>
     </nav>
-  </div>
+  </header>
 
-  <main class="home-shell">
+  <main id="main-content" tabindex="-1" class="home-shell">
     <section class="feature-hero">
       <div class="hero-text">
         <h1 class="hero-title">Ziyue Yang</h1>
@@ -52,13 +49,27 @@
         <!-- <p class="byline">Ex-RA at ANU RSFAS and CSIRO Data61; often found hiking around Canberra or reading about tech.</p> -->
         <a class="text-link" href="about.html">Read more about me</a>
         <div class="hero-actions">
-          <a class="button primary" href="research.html">Research</a>
-          <a class="button primary" href="src/humphrey_cv.pdf">CV</a>
+          <a class="text-link action-link" href="research.html">Research</a>
+          <a class="text-link action-link" href="src/humphrey_cv.pdf">CV</a>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/HumphreyYang" class="contact-link">
+            <i class="fa fa-github fa-fw" aria-hidden="true"></i> Github
+          </a>
+          <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5" class="contact-link">
+            <i class="fa fa-linkedin fa-fw" aria-hidden="true"></i> LinkedIn
+          </a>
+          <a href="mailto:humphrey.ziyueyang@gmail.com" class="contact-link no-fade">
+            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i> Email
+          </a>
+          <a href="favorites.html" class="contact-link">
+            <i class="fa fa-star fa-fw" aria-hidden="true"></i> Favorites
+          </a>
         </div>
       </div>
 
-      <div class="hero-aside">
-        <div class="ribbon">Research</div>
+      <aside class="hero-aside" aria-labelledby="selected-research">
+        <!-- <h2 class="section-kicker" id="selected-research">New Research</h2> -->
         <!-- <p class="signal-title">Computing resilient policy rules and safe generative tools.</p> -->
         <div class="signal-list">
           <div class="signal-item">
@@ -78,34 +89,14 @@
           </div> -->
         </div>
         <a class="text-link" href="research.html">View papers &amp; projects</a>
-        <div class="contact-links">
-          <a href="https://github.com/HumphreyYang" class="contact-link">
-            <i class="fa fa-github fa-fw"></i> Github
-          </a>
-          <a href="https://www.linkedin.com/in/ziyue-yang-b536991b5" class="contact-link">
-            <i class="fa fa-linkedin fa-fw"></i> LinkedIn
-          </a>
-          <a href="mailto:humphrey.ziyueyang@gmail.com" class="contact-link no-fade">
-            <i class="fa fa-envelope fa-fw"></i> Email
-          </a>
-          <a href="favorites.html" class="contact-link">
-            <i class="fa fa-star fa-fw"></i> Favorites
-          </a>
-        </div>
-      </div>
+
+      </aside>
     </section>
 
-    <!-- <section class="roles">
-      <p class="section-kicker">Roles &amp; collaborations</p>
-      <ul class="roles-list">
-        <li><strong>Research assistant, QuantEcon</strong> — building open-source tools for economists.</li>
-        <li><strong>Former RA, ANU RSFAS</strong> — applied statistical learning and econometrics.</li>
-        <li><strong>Intern, CSIRO Data61</strong> — security of generative adversarial networks.</li>
-      </ul>
-    </section> -->
   </main>
   <footer>
-    &copy; <em id="date"></em>Humphrey Yang | My homebrewed website : )
+    <span>&copy; <em id="date"></em> Humphrey Yang</span>
+    <span>My homebrewed website : )</span>
   </footer>
 </body>
 </html>

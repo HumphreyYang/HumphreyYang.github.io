@@ -18,36 +18,28 @@
   <meta name="description" content="Humphrey Yang's Personal Website">
   <link rel="icon" href="src/Stars.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 
-  <script src="javascript/web.js"></script>
+  <script defer src="javascript/web.js"></script>
 </head>
 
-<body class="page-body fade-in">
-  <!-- Sidebar toggle button -->
-  <button class="sidebar-toggle" onclick="toggleSidebar()">
-    <i class="fa fa-bars"></i>
-  </button>
-
-  <!-- Collapsible sidebar -->
-  <div class="sidebar">
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="index.html">Home</a>
-      <a class="sidebar-nav-item active" href="about.html">About</a>
-      <a class="sidebar-nav-item" href="research.html">Research</a>
-      <a class="sidebar-nav-item" href="favorites.html">Favorites</a>
-      <!-- Add other links if needed -->
+<body class="page-body about-page fade-in">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="site-mark" href="index.html" aria-label="Home">
+      <img src="src/magician-cat.svg" width="40" height="40" alt="">
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" aria-current="page" href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="favorites.html">Favorites</a>
     </nav>
-    
-    <!-- Optional quote section -->
-    <!-- <div class="sidebar-quote">
-      <em>"When I have free time, I enjoy hiking around Canberra..."</em>
-    </div> -->
-  </div>
+  </header>
 
-  <main class="page-shell">
+  <main id="main-content" tabindex="-1" class="page-shell">
     <header class="page-header">
       <h1 class="page-title">About me</h1>
       <!-- <p class="page-lede">A quick snapshot of my background, research interests, and what keeps me curious.</p> -->
@@ -56,12 +48,14 @@
     <section class="page-card">
       <div class="stack-wrapper">
         <figure class="image">
-          <img src="src/me.jpg" alt="Humphrey Yang" />
+          <img src="src/me.jpg" alt="Humphrey Yang" decoding="async" />
         </figure>
         <div class="text-content">
           <p>Hi, this is Ziyue (Humphrey) Yang. I am a PhD student in Finance at the Wharton School of the University of Pennsylvania.</p>
 
-          <p>Before Wharton, I was a PhD student in economics at the Australian National University, supervised by <a href="https://johnstachurski.net/">Professor John Stachurski</a>, and a research assistant at QuantEcon. Previously, I worked as a research assistant at the ANU Research School of Finance, Actuarial Studies and Statistics (RSFAS) and as a summer intern at Data61, CSIRO, researching statistical learning and the security of generative adversarial models.</p>
+          <p>Before Wharton, I was a PhD student in economics at the Australian National University. My supervisor was <a href="https://johnstachurski.net/">Professor John Stachurski</a>, and my panel members were <a href="https://www.tomsargent.com/">Thomas J. Sargent</a> and <a href="https://rse.anu.edu.au/people/ronald-stauber">Ronald Stauber</a>.</p>
+
+          <p>I was also a research assistant at QuantEcon. Previously, I worked as a research assistant at the ANU Research School of Finance, Actuarial Studies and Statistics (RSFAS) and as a summer intern at Data61, CSIRO, researching statistical learning and the security of generative adversarial models.</p>
 
           <p>I graduated with bachelor's degrees in Data Analytics and in Politics, Philosophy and Economics in 2023.</p>
 
@@ -71,8 +65,9 @@
     </section>
 
   </main>
+  <footer>
+    <span>&copy; <em id="date"></em> Humphrey Yang</span>
+    <span>My homebrewed website : )</span>
+  </footer>
 </body>
-<footer>
-  &copy; <em id="date"></em>Humphrey Yang | My homebrewed website : )
-</footer>
 </html>

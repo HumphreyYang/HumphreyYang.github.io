@@ -1,106 +1,86 @@
-const setMaxTextWidth = () => {
-  let maxTextWidth = 0;
-  const iconTextElements = document.querySelectorAll(".icon-text");
-  
-  iconTextElements.forEach((element) => {
-    element.style.width = "auto";
-    if (element.offsetWidth > maxTextWidth) {
-      maxTextWidth = element.offsetWidth;
-    }
-  });
-  
-  iconTextElements.forEach((element) => {
-    element.style.width = `${maxTextWidth}px`;
-  });
-};
+function setSidebarState(isOpen, returnFocus = false) {
+  const sidebar = document.querySelector(".sidebar");
+  if (!sidebar) return;
+
+  const toggle = document.querySelector(".sidebar-toggle");
+  sidebar.id ||= "site-sidebar";
+  sidebar.classList.toggle("active", isOpen);
+  sidebar.inert = !isOpen;
+  sidebar.setAttribute("aria-hidden", String(!isOpen));
+
+  if (toggle) {
+    toggle.setAttribute("aria-controls", sidebar.id);
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    if (returnFocus) toggle.focus();
+  }
+}
 
 function toggleSidebar() {
   const sidebar = document.querySelector(".sidebar");
-  sidebar.classList.toggle("active");
+  if (!sidebar) return;
+  setSidebarState(!sidebar.classList.contains("active"));
 }
 
-function closeSidebar() {
-  const sidebar = document.querySelector(".sidebar");
-  sidebar.classList.remove("active");
+function closeSidebar(returnFocus = false) {
+  setSidebarState(false, returnFocus);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("fade-in", "show");
 
-  // Handle browser navigation
-  window.addEventListener("pageshow", function (event) {
-    if (event.persisted) {
-      document.body.classList.remove("fade-out");
-      document.body.classList.add("fade-in", "show");
+  const pagePath = (pathname) => pathname.replace(/\/$/, "/index.html").toLowerCase();
+  const currentPath = pagePath(window.location.pathname);
+
+  document.querySelectorAll(".site-nav a, .sidebar-nav-item").forEach((link) => {
+    const destination = new URL(link.href, window.location.href);
+    const isCurrent = destination.origin === window.location.origin &&
+      pagePath(destination.pathname) === currentPath;
+    link.classList.toggle("active", isCurrent);
+    if (isCurrent) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
     }
   });
 
-  // Set active page
-  const currentPath = window.location.pathname.split('/').pop().toLowerCase() || 'index.html';
-  const links = document.querySelectorAll(".sidebar-nav-item");
-  
-  links.forEach(link => {
-    const linkPath = link.getAttribute('href').toLowerCase();
-    link.classList.remove('active');
-    
-    // Handle home page special case
-    if ((currentPath === '' || currentPath === 'index.html') && linkPath === 'index.html') {
-      link.classList.add('active');
-    }
-    // Handle other pages
-    else if (currentPath === linkPath) {
-      link.classList.add('active');
+  // Let the browser handle clicks, downloads, anchors, and modifier keys.
+  document.querySelectorAll("a[href]").forEach((link) => {
+    const destination = new URL(link.href, window.location.href);
+    if ((destination.protocol === "https:" || destination.protocol === "http:") &&
+        destination.origin !== window.location.origin &&
+        !link.hasAttribute("target")) {
+      link.target = "_blank";
+      link.relList.add("noopener", "noreferrer");
     }
   });
 
-  // Link click handler
-  document.addEventListener("click", function(event) {
-    const link = event.target.closest("a");
-    if (!link) return;
-  
-    // Handle download links and external PDFs
-    if (link.classList.contains('download-link') || 
-        link.href.endsWith('.pdf') ||
-        link.hostname !== window.location.hostname) {
-      // Open in new tab for external links
-      if (link.hostname !== window.location.hostname) {
-        event.preventDefault();
-        window.open(link.href, '_blank');
-      }
-      return true; // Allow default behavior for local PDFs
-    }
-  
-    if (link.classList.contains("no-fade")) return;
-  
-    event.preventDefault();
-    const url = link.href;
-  
-    document.body.classList.remove("show");
-    document.body.classList.add("fade-out");
-  
-    setTimeout(() => {
-      window.location.href = url;
-    }, 500);
+  document.querySelectorAll("em#date").forEach((year) => {
+    year.textContent = new Date().getFullYear();
   });
 
-  // Close sidebar interactions
+  const sidebar = document.querySelector(".sidebar");
+  if (!sidebar) return;
+
+  setSidebarState(sidebar.classList.contains("active"));
+
   document.addEventListener("click", function (event) {
-    const sidebar = document.querySelector(".sidebar");
-    const toggleBtn = document.querySelector(".sidebar-toggle");
-    
-    if (!sidebar.contains(event.target) && 
-        !toggleBtn.contains(event.target) &&
-        sidebar.classList.contains("active")) {
+    const toggle = document.querySelector(".sidebar-toggle");
+    if (sidebar.classList.contains("active") &&
+        !sidebar.contains(event.target) &&
+        !toggle?.contains(event.target)) {
       closeSidebar();
     }
   });
 
   document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      closeSidebar();
+    if (event.key === "Escape" && sidebar.classList.contains("active")) {
+      closeSidebar(true);
     }
   });
+});
 
-  window.addEventListener("load", setMaxTextWidth);
-  window.addEventListener("resize", setMaxTextWidth);
+window.addEventListener("pageshow", function () {
+  document.body.classList.remove("fade-out");
+  document.body.classList.add("show");
 });
