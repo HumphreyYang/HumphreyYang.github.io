@@ -1,0 +1,159 @@
+/* Reading group: shared site typography, colors, and open paper layout. */
+.reading-organizers {
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  color: var(--home-text);
+}
+
+.reading-session {
+  border-top: 1px solid var(--home-border);
+  border-bottom: 1px solid var(--home-border);
+}
+
+.reading-session + .reading-session {
+  border-top: 0;
+}
+
+.reading-session > summary {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 88px;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.reading-session > summary::-webkit-details-marker {
+  display: none;
+}
+
+.reading-session-heading {
+  display: grid;
+  gap: 5px;
+  flex: 1;
+  min-width: 0;
+}
+
+.reading-session-date {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--home-title);
+}
+
+.reading-session-toggle {
+  position: relative;
+  flex: 0 0 18px;
+  height: 18px;
+  color: var(--home-accent);
+}
+
+.reading-session-toggle::before,
+.reading-session-toggle::after {
+  content: '';
+  position: absolute;
+  inset: 8px 2px;
+  height: 2px;
+  background: currentColor;
+}
+
+.reading-session-toggle::after {
+  transform: rotate(90deg);
+}
+
+.reading-session[open] .reading-session-toggle::after {
+  display: none;
+}
+
+.reading-session > summary:is(:hover, :focus-visible) .reading-session-date {
+  color: var(--home-accent);
+}
+
+.reading-session-content {
+  padding: 8px 0 28px;
+}
+
+.reading-session-content .reading-zoom {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: var(--home-text);
+}
+
+.reading-list {
+  gap: 0;
+}
+
+.reading-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+  align-items: start;
+  gap: 36px;
+  margin: 0;
+  padding: 24px 0;
+  border-top: 1px solid var(--home-border);
+}
+
+.reading-entry:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.reading-entry:last-child {
+  padding-bottom: 0;
+}
+
+.reading-participant {
+  min-width: 0;
+}
+
+.reading-participant h2 {
+  margin: 0 0 4px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.reading-email {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.reading-interests {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.reading-interests > span {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.reading-entry .paper-link {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .reading-session > summary {
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  .reading-session-heading {
+    flex-basis: calc(100% - 32px);
+  }
+
+  .reading-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+}
