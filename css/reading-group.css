@@ -73,13 +73,79 @@
 }
 
 .reading-session-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 48px;
   padding: 8px 0 28px;
 }
 
-.reading-session-content .reading-zoom {
-  margin: 0 0 24px;
+.reading-schedule,
+.reading-materials {
+  min-width: 0;
+}
+
+.reading-roadmap {
+  margin-bottom: 32px;
+}
+
+.reading-materials h3 {
+  margin-bottom: 10px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+}
+
+.reading-materials p {
+  margin: 0 0 16px;
+  font-size: 15px;
+}
+
+.reading-materials p:last-child {
+  margin-bottom: 0;
+}
+
+.reading-roadmap ol {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  margin: 16px 0;
+  list-style: none;
+  font-size: 15px;
+}
+
+.reading-materials li a {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.reading-roadmap li p {
+  margin: 4px 0 0;
+}
+
+.reading-background {
+  display: grid;
+  gap: 20px;
+}
+
+.reading-background h4 {
+  margin: 0 0 8px;
+  font-family: 'Work Sans', sans-serif;
   font-size: 14px;
-  color: var(--home-text);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--home-title);
+}
+
+.reading-background ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+  margin: 0;
+  font-size: 15px;
+}
+
+.reading-session-content [id] {
+  scroll-margin-top: 24px;
 }
 
 .reading-list {
@@ -88,11 +154,9 @@
 
 .reading-entry {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
-  align-items: start;
-  gap: 36px;
+  gap: 10px;
   margin: 0;
-  padding: 24px 0;
+  padding: 20px 0;
   border-top: 1px solid var(--home-border);
 }
 
@@ -109,7 +173,7 @@
   min-width: 0;
 }
 
-.reading-participant h2 {
+.reading-participant h3 {
   margin: 0 0 4px;
   font-family: 'Work Sans', sans-serif;
   font-size: 16px;
@@ -124,22 +188,28 @@
 }
 
 .reading-interests {
-  margin: 12px 0 0;
+  margin: 6px 0 0;
   font-size: 14px;
   line-height: 1.6;
 }
 
 .reading-interests > span {
-  display: block;
-  margin-bottom: 2px;
-  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+}
+
+.reading-interests > span::after {
+  content: ': ';
 }
 
 .reading-entry .paper-link {
   overflow-wrap: anywhere;
+}
+
+@media (max-width: 800px) {
+  .reading-session-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -150,10 +220,5 @@
 
   .reading-session-heading {
     flex-basis: calc(100% - 32px);
-  }
-
-  .reading-entry {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
   }
 }
