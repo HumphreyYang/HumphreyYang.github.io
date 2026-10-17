@@ -85,6 +85,10 @@
   min-width: 0;
 }
 
+.reading-extra-materials {
+  grid-column: 1 / -1;
+}
+
 .reading-roadmap {
   margin-bottom: 32px;
 }
@@ -104,40 +108,16 @@
   margin-bottom: 0;
 }
 
-.reading-calendar-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px 16px;
-  margin: 20px 0 12px;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 14px;
-}
-
-.reading-group-page main .reading-calendar-button {
+.reading-calendar-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  max-width: 100%;
-  padding: 10px 16px;
-  border: 1px solid var(--home-accent);
-  border-radius: 2px;
-  background: var(--home-accent);
-  color: var(--home-surface);
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: center;
+  margin-left: 4px;
+  padding: 4px;
+  vertical-align: middle;
+  line-height: 1;
 }
 
-.reading-group-page main .reading-calendar-button:is(:hover, :focus-visible) {
-  border-color: var(--home-accent-2);
-  background: var(--home-accent-2);
-  color: var(--home-surface);
-  text-decoration: none;
-}
-
-.reading-materials .reading-calendar-note,
 .reading-materials .reading-map-directions {
   font-size: 13px;
   line-height: 1.6;
@@ -184,12 +164,17 @@
   color: var(--home-title);
 }
 
-.reading-background ul {
+.reading-background ul,
+.reading-extra-materials ul {
   display: grid;
   gap: 8px;
   padding-left: 20px;
   margin: 0;
   font-size: 15px;
+}
+
+.reading-extra-materials ul {
+  margin: 0 0 16px;
 }
 
 .reading-session-content [id] {
@@ -198,6 +183,12 @@
 
 .reading-list {
   gap: 0;
+}
+
+.reading-member-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 40px;
+  padding: 8px 0 28px;
 }
 
 .reading-entry {
@@ -253,6 +244,13 @@
   overflow-wrap: anywhere;
 }
 
+.reading-slides {
+  justify-self: start;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 @media (max-width: 800px) {
   .reading-session-content {
     grid-template-columns: minmax(0, 1fr);
@@ -261,6 +259,10 @@
 }
 
 @media (max-width: 640px) {
+  .reading-member-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .reading-session > summary {
     flex-wrap: wrap;
     gap: 8px 14px;

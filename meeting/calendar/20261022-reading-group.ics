@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Humphrey Yang//Sargent Reading Group//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:sargent-reading-group-20261022@humphreyyang.github.io
+DTSTAMP:20261017T224947Z
+DTSTART:20261022T210000Z
+DTEND:20261022T230000Z
+SUMMARY:Sargent Reading Group — Fifth Meeting
+LOCATION:SHDH 2401\, Steinberg Hall-Dietrich Hall\, 3620 Locust Walk\, Phil
+ adelphia\, PA 19104
+DESCRIPTION:Jiacheng Li: Credible Government Policies with Reputations (con
+ tinuing\, about 45 minutes).\nAlex Oktay: Equilibrium with Complete Market
+ s (continuing from Tommaso Manfè\, about 45 minutes).
+URL:https://humphreyyang.github.io/reading-group.html#october-22
+END:VEVENT
+END:VCALENDAR
