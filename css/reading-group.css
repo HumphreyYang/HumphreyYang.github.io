@@ -7,8 +7,18 @@
 }
 
 .reading-session {
+  --home-title: var(--home-text);
   border-top: 1px solid var(--home-border);
   border-bottom: 1px solid var(--home-border);
+}
+
+.reading-group-page main .reading-session a:not(.reading-calendar-link) {
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+}
+
+.reading-group-page main .reading-session a:not(.reading-calendar-link):is(:hover, :focus-visible) {
+  text-decoration-color: currentColor;
 }
 
 .reading-session + .reading-session {
@@ -87,6 +97,70 @@
 
 .reading-extra-materials {
   grid-column: 1 / -1;
+}
+
+.reading-session-standard .reading-session-content {
+  row-gap: 32px;
+}
+
+.reading-session-standard .reading-extra-materials {
+  padding: 20px 24px 24px;
+  background: #f4f3ee;
+  background: color-mix(in srgb, var(--home-link) 6%, var(--home-surface));
+}
+
+.reading-session-standard .reading-extra-materials > h2 {
+  margin-bottom: 16px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--home-text);
+}
+
+.reading-session-standard .reading-extra-materials .reading-background h4 {
+  color: var(--home-text);
+}
+
+.reading-session-standard .reading-meeting-facts {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--home-muted);
+}
+
+.reading-session-standard .reading-meeting-facts > div {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.reading-session-standard .reading-meeting-facts dt {
+  font-weight: 500;
+  color: var(--home-text);
+}
+
+.reading-session-standard .reading-meeting-facts dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.reading-session-standard .reading-extra-materials .reading-background {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 24px 48px;
+}
+
+.reading-session-standard .reading-extra-materials .reading-background > section {
+  min-width: 0;
+}
+
+.reading-session-standard .reading-extra-materials .reading-background ul {
+  margin: 0;
 }
 
 .reading-roadmap {
@@ -256,9 +330,17 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 36px;
   }
+
+  .reading-session-standard .reading-extra-materials .reading-background {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
+  .reading-session-standard .reading-extra-materials {
+    padding: 16px;
+  }
+
   .reading-member-list {
     grid-template-columns: minmax(0, 1fr);
   }
