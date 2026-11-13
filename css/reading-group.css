@@ -159,6 +159,10 @@
   min-width: 0;
 }
 
+.reading-session-standard .reading-extra-materials .reading-background > section:only-child {
+  grid-column: 1 / -1;
+}
+
 .reading-session-standard .reading-extra-materials .reading-background ul {
   margin: 0;
 }
